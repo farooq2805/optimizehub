@@ -1,5 +1,5 @@
 import React from 'react';
-import { Target, TrendingUp, Users, BarChart3, Search, Share2, ArrowRight } from 'lucide-react';
+import { Target, TrendingUp, Users, BarChart3, Search, Share2, ArrowRight, ShieldCheck, Gem } from 'lucide-react';
 import { Page } from '../types';
 
 interface ServicesProps {
@@ -54,7 +54,7 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
 
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-24">
+        <div className="space-y-24 mb-24">
           {services.map((service, index) => (
             <div key={service.id} className={`flex flex-col md:flex-row gap-12 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}>
               
@@ -95,14 +95,47 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
             </div>
           ))}
         </div>
+
+        {/* Pricing & Philosophy Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+            <div className="bg-slate-900 p-10 rounded-3xl border border-slate-800 relative overflow-hidden group hover:border-amber-500/50 transition-colors">
+                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <BarChart3 className="w-32 h-32 text-amber-500" />
+                </div>
+                <div className="relative z-10">
+                    <ShieldCheck className="w-10 h-10 text-amber-500 mb-6" />
+                    <h3 className="text-2xl font-bold text-white mb-4">Our Pricing Philosophy</h3>
+                    <p className="text-slate-400 leading-relaxed text-lg">
+                        We believe in value-based pricing. You don't pay for "hours"; you pay for <strong>results</strong>. 
+                        Every dirham spent is tracked against tangible KPIs—whether that's leads generated, ROAS achieved, or market share gained. 
+                        No hidden fees, no retainer bloat. Just clear, performance-driven investment.
+                    </p>
+                </div>
+            </div>
+             <div className="bg-slate-900 p-10 rounded-3xl border border-slate-800 relative overflow-hidden group hover:border-amber-500/50 transition-colors">
+                <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
+                    <Gem className="w-32 h-32 text-amber-500" />
+                </div>
+                <div className="relative z-10">
+                    <TrendingUp className="w-10 h-10 text-amber-500 mb-6" />
+                    <h3 className="text-2xl font-bold text-white mb-4">The Dubai Standard</h3>
+                    <p className="text-slate-400 leading-relaxed text-lg">
+                       In a market flooded with low-cost, low-quality agencies, OptimizeHub stands for premium execution. 
+                       We invest in the best tools, local talent, and data sources to ensure your brand is represented 
+                       at the highest level. Quality is not an expense; it's an asset.
+                    </p>
+                </div>
+            </div>
+        </div>
         
-        <div className="mt-24 text-center">
+        {/* Bottom CTA */}
+        <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-6">Need a custom package?</h3>
              <a 
               href="https://wa.me/9717020895818" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center border border-slate-600 hover:border-amber-500 text-slate-300 hover:text-amber-500 px-8 py-4 rounded-full transition-all"
+              className="inline-flex items-center justify-center border border-slate-600 hover:border-amber-500 hover:bg-amber-500 hover:text-slate-950 text-slate-300 px-8 py-4 rounded-full transition-all font-semibold"
             >
                 Contact us on WhatsApp (+971 7020895818)
             </a>

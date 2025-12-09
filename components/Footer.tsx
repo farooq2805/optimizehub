@@ -29,9 +29,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div>
             <h4 className="text-white font-semibold mb-6">Explore</h4>
             <ul className="space-y-3">
-              <li><button onClick={() => onNavigate(Page.ABOUT)} className="text-slate-400 hover:text-amber-500 text-sm">About Us</button></li>
-              <li><button onClick={() => onNavigate(Page.SERVICES)} className="text-slate-400 hover:text-amber-500 text-sm">Our Services</button></li>
-              <li><button onClick={() => onNavigate(Page.CONTACT)} className="text-slate-400 hover:text-amber-500 text-sm">Contact</button></li>
+              <li><button onClick={() => onNavigate(Page.ABOUT)} className="text-slate-400 hover:text-amber-500 text-sm transition-colors">About Us</button></li>
+              <li><button onClick={() => onNavigate(Page.SERVICES)} className="text-slate-400 hover:text-amber-500 text-sm transition-colors">Our Services</button></li>
+              <li><button onClick={() => onNavigate(Page.CONTACT)} className="text-slate-400 hover:text-amber-500 text-sm transition-colors">Contact</button></li>
             </ul>
           </div>
 
@@ -39,10 +39,10 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div>
             <h4 className="text-white font-semibold mb-6">Services</h4>
             <ul className="space-y-3">
-              <li className="text-slate-400 text-sm">SEO Optimization</li>
-              <li className="text-slate-400 text-sm">Paid Marketing (PPC)</li>
-              <li className="text-slate-400 text-sm">Influencer Management</li>
-              <li className="text-slate-400 text-sm">Social Media Strategy</li>
+              <li><button onClick={() => onNavigate(Page.SERVICE_SEO)} className="text-slate-400 hover:text-amber-500 text-sm transition-colors text-left">SEO Optimization</button></li>
+              <li><button onClick={() => onNavigate(Page.SERVICE_PAID)} className="text-slate-400 hover:text-amber-500 text-sm transition-colors text-left">Paid Marketing (PPC)</button></li>
+              <li><button onClick={() => onNavigate(Page.SERVICE_INFLUENCER)} className="text-slate-400 hover:text-amber-500 text-sm transition-colors text-left">Influencer Management</button></li>
+              <li><button onClick={() => onNavigate(Page.SERVICE_SOCIAL)} className="text-slate-400 hover:text-amber-500 text-sm transition-colors text-left">Social Media Strategy</button></li>
             </ul>
           </div>
 

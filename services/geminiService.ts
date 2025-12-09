@@ -1,7 +1,8 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { GeneratedStrategy } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Initialize with the specific API key for this project
+const ai = new GoogleGenAI({ apiKey: "AIzaSyA5Hjbs8ZSs_9unxlmnmrg1_Ab4e-y_wd4" });
 
 export const generateMarketingStrategy = async (
   businessName: string,
