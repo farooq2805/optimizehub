@@ -149,7 +149,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 <div className="relative">
                     <div className="absolute -inset-4 bg-amber-500/20 rounded-3xl blur-xl"></div>
                     <img 
-                        src="https://images.unsplash.com/photo-1550505193-272cb647a7b8?q=80&w=1000&auto=format&fit=crop" 
+                        src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1000&auto=format&fit=crop" 
                         alt="Dubai Skyline" 
                         className="relative rounded-2xl shadow-2xl border border-slate-700 grayscale hover:grayscale-0 transition-all duration-700"
                     />
