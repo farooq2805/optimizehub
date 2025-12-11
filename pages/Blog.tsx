@@ -9,29 +9,29 @@ interface BlogProps {
 const Blog: React.FC<BlogProps> = ({ onNavigate }) => {
   const posts = [
     {
-      title: "SEO Dubai 2024: How to Rank in a Bilingual Market",
-      excerpt: "Navigating the complexities of English and Arabic search intent to dominate the UAE Google results.",
+      title: "Advanced SEO 2024: Ranking in Competitive Markets",
+      excerpt: "Navigating the complexities of search intent to dominate the Google results in high-value sectors.",
       category: "SEO Strategy",
       date: "Oct 12, 2024",
       author: "Nisha Sequeira"
     },
     {
-      title: "Influencer Marketing in Dubai: Why Micro-Influencers Convert Better",
+      title: "Influencer Marketing Trends: Why Micro-Influencers Convert Better",
       excerpt: "The shift from celebrity endorsements to authentic, niche storytelling in the Luxury and F&B sectors.",
       category: "Influencer Marketing",
       date: "Oct 08, 2024",
       author: "Nisha Sequeira"
     },
     {
-      title: "Paid Advertising UAE: Maximizing ROAS During Ramadan",
-      excerpt: "Key strategies for timing your ad spend during the Holy Month to capture high-intent traffic.",
+      title: "Paid Advertising Strategy: Maximizing ROAS During Seasonal Peaks",
+      excerpt: "Key strategies for timing your ad spend during holidays and events to capture high-intent traffic.",
       category: "Paid Ads",
       date: "Sept 25, 2024",
       author: "Farooq Syed"
     },
     {
       title: "Real Estate Digital Marketing: Generating Leads for Off-Plan Properties",
-      excerpt: "A deep dive into lead generation funnels specifically designed for Dubai's booming property market.",
+      excerpt: "A deep dive into lead generation funnels specifically designed for booming property markets.",
       category: "Industry Focus",
       date: "Sept 15, 2024",
       author: "Melroy"
@@ -44,7 +44,7 @@ const Blog: React.FC<BlogProps> = ({ onNavigate }) => {
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">OptimizeHub <span className="text-gradient-gold">Insights</span></h1>
           <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-            Expert analysis, trends, and strategies for the UAE digital landscape.
+            Expert analysis, trends, and strategies for the digital landscape.
           </p>
         </div>
 
@@ -70,7 +70,7 @@ const Blog: React.FC<BlogProps> = ({ onNavigate }) => {
 
         <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-12 text-center border border-slate-700">
           <h2 className="text-3xl font-bold text-white mb-4">Stay Ahead of the Curve</h2>
-          <p className="text-slate-400 mb-8 max-w-xl mx-auto">Subscribe to our newsletter for the latest Dubai marketing trends delivered straight to your inbox.</p>
+          <p className="text-slate-400 mb-8 max-w-xl mx-auto">Subscribe to our newsletter for the latest marketing trends delivered straight to your inbox.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto mb-8">
             <input 
               type="email" 

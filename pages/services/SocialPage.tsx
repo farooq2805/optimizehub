@@ -21,10 +21,10 @@ const SocialPage: React.FC<Props> = ({ onNavigate }) => {
                 <span className="text-amber-400 text-xs font-bold tracking-widest uppercase">Creative & Strategy</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Social Media That <br/><span className="text-gradient-gold">Captivates Dubai.</span>
+              Social Media That <br/><span className="text-gradient-gold">Captivates Audiences.</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              In a city driven by aesthetics and status, your social presence is your digital storefront. We build premium, engaging brands on Instagram, TikTok, Snapchat, and LinkedIn.
+              In a world driven by aesthetics and status, your social presence is your digital storefront. We build premium, engaging brands on Instagram, TikTok, Snapchat, and LinkedIn.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://wa.me/9717020895818" target="_blank" rel="noopener noreferrer" className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-8 py-4 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2 transition-all hover:scale-105">
@@ -34,13 +34,13 @@ const SocialPage: React.FC<Props> = ({ onNavigate }) => {
           </div>
           <div className="bg-slate-900 rounded-3xl p-8 border border-slate-800 shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 blur-[50px]"></div>
-             <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-amber-500 pl-4">The Dubai Aesthetic</h3>
+             <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-amber-500 pl-4">The Premium Standard</h3>
              <ul className="space-y-6 relative z-10">
                <li className="flex gap-4">
                  <Image className="w-10 h-10 text-amber-500 flex-shrink-0" />
                  <div>
                    <h4 className="text-white font-bold text-lg">Visual Excellence</h4>
-                   <p className="text-slate-400 text-sm mt-1">Dubai audiences expect high-production value. We deliver cinema-quality reels, photography, and motion graphics.</p>
+                   <p className="text-slate-400 text-sm mt-1">Modern audiences expect high-production value. We deliver cinema-quality reels, photography, and motion graphics.</p>
                  </div>
                </li>
                <li className="flex gap-4">
@@ -54,7 +54,7 @@ const SocialPage: React.FC<Props> = ({ onNavigate }) => {
                  <PenTool className="w-10 h-10 text-amber-500 flex-shrink-0" />
                  <div>
                    <h4 className="text-white font-bold text-lg">Platform Expertise</h4>
-                   <p className="text-slate-400 text-sm mt-1">Knowing that Snapchat is key for locals, LinkedIn for B2B, and Instagram for lifestyle.</p>
+                   <p className="text-slate-400 text-sm mt-1">Knowing that platform nuance is key, whether for LinkedIn B2B or Instagram lifestyle.</p>
                  </div>
                </li>
              </ul>
@@ -84,15 +84,15 @@ const SocialPage: React.FC<Props> = ({ onNavigate }) => {
                 </section>
 
                 <section>
-                    <h2 className="text-3xl font-bold text-white mb-6">Why It Matters in UAE</h2>
+                    <h2 className="text-3xl font-bold text-white mb-6">Why It Matters</h2>
                     <p className="text-slate-400 mb-6 leading-relaxed">
-                        The UAE has one of the highest social media penetration rates in the world. Your customers are scrolling right now. If your feed looks outdated or inactive, they assume your business is too. We turn your social channels into a dynamic portfolio that sells 24/7.
+                        Social media penetration rates are skyrocketing. Your customers are scrolling right now. If your feed looks outdated or inactive, they assume your business is too. We turn your social channels into a dynamic portfolio that sells 24/7.
                     </p>
                     <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 flex gap-4 items-center">
                         <Instagram className="w-12 h-12 text-pink-500" />
                         <div>
                             <h3 className="text-white font-bold">The "Instagrammable" Standard</h3>
-                            <p className="text-slate-400 text-sm">We ensure your brand fits the luxury, high-end aesthetic that defines the Dubai lifestyle, making your business desirable.</p>
+                            <p className="text-slate-400 text-sm">We ensure your brand fits the luxury, high-end aesthetic that defines the modern lifestyle, making your business desirable.</p>
                         </div>
                     </div>
                 </section>
@@ -133,8 +133,8 @@ const SocialPage: React.FC<Props> = ({ onNavigate }) => {
                             <p className="text-slate-400 text-xs leading-relaxed">Yes! We have an in-house team of photographers, videographers, and editors. You don't need to lift a finger.</p>
                         </div>
                         <div>
-                            <h4 className="text-white font-semibold text-sm mb-2">What about Arabic content?</h4>
-                            <p className="text-slate-400 text-xs leading-relaxed">We provide full bilingual management with native Arabic copywriters who understand the local dialect and tone.</p>
+                            <h4 className="text-white font-semibold text-sm mb-2">What about regional content?</h4>
+                            <p className="text-slate-400 text-xs leading-relaxed">We provide full multilingual management with native copywriters who understand local dialects and tone.</p>
                         </div>
                     </div>
                 </div>

@@ -18,13 +18,13 @@ const SeoPage: React.FC<Props> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-center">
           <div>
             <div className="inline-block px-4 py-1 mb-4 border border-amber-500/30 rounded-full bg-amber-500/10">
-                <span className="text-amber-400 text-xs font-bold tracking-widest uppercase">#1 SEO Agency Dubai</span>
+                <span className="text-amber-400 text-xs font-bold tracking-widest uppercase">#1 SEO Agency</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Dominating Search in a <br/><span className="text-gradient-gold">Bilingual Market</span>
+              Dominating Search in a <br/><span className="text-gradient-gold">Competitive Market</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              In Dubai, if you aren't on Page 1, you don't exist. We engineer robust English and Arabic SEO strategies that capture high-intent traffic from Jumeirah to Jebel Ali.
+              If you aren't on Page 1, you don't exist. We engineer robust SEO strategies that capture high-intent traffic from local to global.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://wa.me/9717020895818" target="_blank" rel="noopener noreferrer" className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-8 py-4 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2 transition-all hover:scale-105">
@@ -34,20 +34,20 @@ const SeoPage: React.FC<Props> = ({ onNavigate }) => {
           </div>
           <div className="bg-slate-900 rounded-3xl p-8 border border-slate-800 shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 blur-[50px]"></div>
-             <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-amber-500 pl-4">The Dubai SEO Advantage</h3>
+             <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-amber-500 pl-4">The OptimizeHub Advantage</h3>
              <ul className="space-y-6 relative z-10">
                <li className="flex gap-4">
                  <Globe className="w-10 h-10 text-amber-500 flex-shrink-0" />
                  <div>
-                   <h4 className="text-white font-bold text-lg">Bilingual Dominance</h4>
-                   <p className="text-slate-400 text-sm mt-1">We optimize for both English expats and Arabic locals. Ignoring Arabic means missing ~40% of the market.</p>
+                   <h4 className="text-white font-bold text-lg">Global Reach</h4>
+                   <p className="text-slate-400 text-sm mt-1">We optimize for diverse audiences and languages, ensuring your brand resonates internationally.</p>
                  </div>
                </li>
                <li className="flex gap-4">
                  <MapPin className="w-10 h-10 text-amber-500 flex-shrink-0" />
                  <div>
                    <h4 className="text-white font-bold text-lg">Hyper-Local Map Pack</h4>
-                   <p className="text-slate-400 text-sm mt-1">Ranking for "Near Me" searches in specific zones like Dubai Marina, Downtown, and Business Bay.</p>
+                   <p className="text-slate-400 text-sm mt-1">Ranking for "Near Me" searches in specific zones to drive footfall and local inquiries.</p>
                  </div>
                </li>
                <li className="flex gap-4">
@@ -70,7 +70,7 @@ const SeoPage: React.FC<Props> = ({ onNavigate }) => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {[
                             "Technical SEO Audits (Core Web Vitals)",
-                            "Bilingual Keyword Research",
+                            "Strategic Keyword Research",
                             "On-Page Optimization (Meta, Schema)",
                             "High-Authority Backlink Building",
                             "Google My Business (GMB) Management",
@@ -86,19 +86,19 @@ const SeoPage: React.FC<Props> = ({ onNavigate }) => {
 
                 <section>
                     <h2 className="text-3xl font-bold text-white mb-6">Industries We Scale</h2>
-                    <p className="text-slate-400 mb-6">Our Dubai SEO strategies are tailored for high-competition sectors:</p>
+                    <p className="text-slate-400 mb-6">Our SEO strategies are tailored for high-competition sectors:</p>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div className="bg-slate-900 p-6 rounded-xl border-t-2 border-amber-500">
                             <h3 className="text-white font-bold mb-2">Real Estate</h3>
-                            <p className="text-sm text-slate-500">Targeting "Luxury apartments Dubai", "Off-plan projects".</p>
+                            <p className="text-sm text-slate-500">Targeting "Luxury apartments", "Off-plan projects".</p>
                         </div>
                         <div className="bg-slate-900 p-6 rounded-xl border-t-2 border-amber-500">
                             <h3 className="text-white font-bold mb-2">Medical Clinics</h3>
-                            <p className="text-sm text-slate-500">Ranking for "Best Dentist", "Dermatologist Jumeirah".</p>
+                            <p className="text-sm text-slate-500">Ranking for "Best Specialists", "Cosmetic Surgery".</p>
                         </div>
                         <div className="bg-slate-900 p-6 rounded-xl border-t-2 border-amber-500">
                             <h3 className="text-white font-bold mb-2">Legal Services</h3>
-                            <p className="text-sm text-slate-500">Authority building for "Corporate Lawyers", "Visa Services".</p>
+                            <p className="text-sm text-slate-500">Authority building for "Corporate Lawyers", "Consulting".</p>
                         </div>
                     </div>
                 </section>
@@ -129,12 +129,12 @@ const SeoPage: React.FC<Props> = ({ onNavigate }) => {
                     <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2"><HelpCircle className="w-5 h-5 text-amber-500"/> FAQ</h3>
                     <div className="space-y-6">
                         <div>
-                            <h4 className="text-white font-semibold text-sm mb-2">How long does SEO take in Dubai?</h4>
+                            <h4 className="text-white font-semibold text-sm mb-2">How long does SEO take?</h4>
                             <p className="text-slate-400 text-xs leading-relaxed">Usually 3-6 months to see significant movement, depending on competition (e.g., Real Estate takes longer than niche services).</p>
                         </div>
                         <div>
-                            <h4 className="text-white font-semibold text-sm mb-2">Do I really need Arabic SEO?</h4>
-                            <p className="text-slate-400 text-xs leading-relaxed">If you want to reach locals and Arab expats, yes. It's often less competitive and higher converting.</p>
+                            <h4 className="text-white font-semibold text-sm mb-2">Do I need multilingual SEO?</h4>
+                            <p className="text-slate-400 text-xs leading-relaxed">If you want to reach diverse demographics, yes. It's often less competitive and higher converting in specific markets.</p>
                         </div>
                         <div>
                             <h4 className="text-white font-semibold text-sm mb-2">Is GMB important?</h4>

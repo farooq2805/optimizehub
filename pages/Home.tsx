@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Page, GeneratedStrategy } from '../types';
-import { TrendingUp, Users, Target, BarChart3, Bot, Sparkles, CheckCircle2, ArrowRight, Building2, Trophy, Star } from 'lucide-react';
+import { TrendingUp, Users, Target, BarChart3, Bot, Sparkles, CheckCircle2, ArrowRight, Building2, Trophy, Star, Globe } from 'lucide-react';
 import { generateMarketingStrategy } from '../services/geminiService';
 
 interface HomeProps {
@@ -12,9 +12,31 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   const [industry, setIndustry] = useState('');
   const [audience, setAudience] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [marketingSpend, setMarketingSpend] = useState('');
+  const [marketingProblem, setMarketingProblem] = useState('');
   const [loading, setLoading] = useState(false);
   const [strategy, setStrategy] = useState<GeneratedStrategy | null>(null);
+
+  // Hero Animation Logic
+  const heroWords = [
+    "High-Impact SEO",
+    "Precision Paid Media",
+    "Authentic Influencers",
+    "Viral Social Strategy"
+  ];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(false); // Start fade out
+      setTimeout(() => {
+        setCurrentWordIndex((prev) => (prev + 1) % heroWords.length);
+        setFade(true); // Start fade in
+      }, 500); // Wait for fade out to finish
+    }, 3000); // Change every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [heroWords.length]);
 
   const handleGenerateStrategy = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,7 +47,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       businessName, 
       industry, 
       audience || 'General Public',
-      marketingSpend || 'Not specified'
+      marketingProblem || 'General growth'
     );
     setStrategy(result);
     setLoading(false);
@@ -35,27 +57,34 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1512453979798-5ea904ac6605?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2301&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-slate-950/60"></div>
         
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-          <div className="inline-block px-4 py-1 mb-6 border border-amber-500/30 rounded-full bg-amber-500/10 backdrop-blur-sm">
-            <span className="text-amber-400 text-sm font-semibold tracking-wide uppercase">Premier Digital Marketing Agency Dubai</span>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
+          <div className="inline-block px-4 py-1 mb-8 border border-amber-500/30 rounded-full bg-amber-500/10 backdrop-blur-sm animate-fade-in">
+            <span className="text-amber-400 text-sm font-semibold tracking-wide uppercase">Premier Digital Growth Agency</span>
           </div>
-          <h1 className="text-5xl md:text-8xl font-bold text-white mb-6 leading-tight tracking-tight">
-            Dominate the <br/>
-            <span className="text-gradient-gold">Dubai Market</span>
+          
+          <h1 className="text-5xl md:text-8xl font-bold text-white mb-8 leading-tight tracking-tight min-h-[220px] md:min-h-[300px]">
+            We Deliver <br/>
+            <span 
+              className={`text-gradient-gold transition-opacity duration-500 block mt-2 pb-4 ${fade ? 'opacity-100' : 'opacity-0'}`}
+            >
+              {heroWords[currentWordIndex]}
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
-            We transform local businesses into industry leaders through data-driven SEO, Paid Media, and Influencer strategies.
+
+          <p className="text-xl md:text-2xl text-slate-300 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
+            We transform ambitious businesses into industry leaders through data-driven strategies and premium execution.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          
+          <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
             <button 
               onClick={() => {
                 const element = document.getElementById('strategy-generator');
                 element?.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-8 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
+              className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-lg shadow-amber-500/20"
             >
               Get Free Strategy
             </button>
@@ -63,19 +92,19 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               href="https://wa.me/9717020895818"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-slate-600 hover:border-amber-500 bg-slate-900/50 backdrop-blur-md text-white hover:text-amber-500 px-8 py-4 rounded-full font-semibold text-lg transition-all flex items-center gap-2"
+              className="border border-slate-600 hover:border-amber-500 bg-slate-900/50 backdrop-blur-md text-white hover:text-amber-500 px-10 py-4 rounded-full font-semibold text-lg transition-all flex items-center gap-2"
             >
               WhatsApp Us
             </a>
           </div>
-          <p className="mt-8 text-slate-500 text-sm tracking-widest uppercase animate-bounce">Scroll to Explore</p>
+          <p className="mt-12 text-slate-500 text-xs tracking-[0.2em] uppercase animate-bounce">Scroll to Explore</p>
         </div>
       </section>
 
       {/* Trust Indicators */}
       <div className="bg-slate-950 border-y border-slate-900 py-10">
         <div className="max-w-7xl mx-auto px-4">
-            <p className="text-center text-slate-500 text-sm uppercase tracking-widest mb-8">Trusted by Dubai's Leading Sectors</p>
+            <p className="text-center text-slate-500 text-sm uppercase tracking-widest mb-8">Trusted by Leading Sectors</p>
             <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
                 {['Real Estate', 'Luxury Hospitality', 'FinTech', 'Healthcare', 'E-Commerce'].map((item) => (
                     <span key={item} className="text-xl font-bold text-slate-300">{item}</span>
@@ -90,15 +119,15 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Holistic Digital Growth</h2>
             <div className="w-24 h-1 bg-amber-500 mx-auto rounded-full mb-6"></div>
-            <p className="text-slate-400 max-w-2xl mx-auto">Comprehensive solutions tailored for the UAE's unique digital landscape.</p>
+            <p className="text-slate-400 max-w-2xl mx-auto">Comprehensive solutions tailored for today's competitive digital landscape.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: <Target className="w-8 h-8" />, title: "SEO Dubai", desc: "Dominate local search rankings and Google Maps.", link: Page.SERVICE_SEO },
-              { icon: <TrendingUp className="w-8 h-8" />, title: "Paid Ads", desc: "High-intent PPC campaigns for instant leads.", link: Page.SERVICE_PAID },
-              { icon: <Users className="w-8 h-8" />, title: "Influencers", desc: "Access the UAE's most trusted voices.", link: Page.SERVICE_INFLUENCER },
-              { icon: <BarChart3 className="w-8 h-8" />, title: "Social Media", desc: "Build a community that loves your brand.", link: Page.SERVICE_SOCIAL },
+              { icon: <Target className="w-8 h-8" />, title: "Advanced SEO", desc: "Dominate search rankings and drive organic traffic.", link: Page.SERVICE_SEO },
+              { icon: <TrendingUp className="w-8 h-8" />, title: "Paid Media", desc: "High-intent campaigns for instant ROI.", link: Page.SERVICE_PAID },
+              { icon: <Users className="w-8 h-8" />, title: "Influencer Network", desc: "Access the industry's most trusted voices.", link: Page.SERVICE_INFLUENCER },
+              { icon: <BarChart3 className="w-8 h-8" />, title: "Social Strategy", desc: "Build a community that loves your brand.", link: Page.SERVICE_SOCIAL },
             ].map((s, idx) => (
               <div 
                 key={idx} 
@@ -125,14 +154,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Why Dubai Businesses Choose <span className="text-gradient-gold">OptimizeHub</span></h2>
+                    <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Why Brands Choose <span className="text-gradient-gold">OptimizeHub</span></h2>
                     <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                        In a city of noise, we create clarity. Our deep understanding of the UAE market—from local consumer behavior to the GCC media landscape—allows us to craft strategies that don't just reach audiences, but convert them.
+                        In a world of noise, we create clarity. Our deep understanding of the digital ecosystem allows us to craft strategies that don't just reach audiences, but convert them. We blend creativity with data science to deliver results that matter.
                     </p>
                     <ul className="space-y-4">
                         {[
-                            "Deep Local Expertise (UAE & GCC)",
-                            "Bilingual Strategy (Arabic & English)",
+                            "Deep Market Expertise",
+                            "Data-Driven Strategy",
                             "Performance-Based ROI Focus",
                             "Premium, Luxury-First Approach"
                         ].map((item, i) => (
@@ -150,7 +179,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <div className="absolute -inset-4 bg-amber-500/20 rounded-3xl blur-xl"></div>
                     <img 
                         src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1000&auto=format&fit=crop" 
-                        alt="Dubai Skyline" 
+                        alt="City Skyline" 
                         className="relative rounded-2xl shadow-2xl border border-slate-700 grayscale hover:grayscale-0 transition-all duration-700"
                     />
                 </div>
@@ -186,15 +215,15 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <div className="flex flex-col md:flex-row justify-between items-end mb-12">
                 <div>
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Proven Results</h2>
-                    <p className="text-slate-400">See how we've transformed businesses across Dubai.</p>
+                    <p className="text-slate-400">See how we've transformed businesses across key sectors.</p>
                 </div>
                 <button onClick={() => onNavigate(Page.CONTACT)} className="mt-4 md:mt-0 text-amber-500 font-bold hover:text-white transition-colors">Start your project &rarr;</button>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
-                    { title: "Luxury Real Estate", metric: "+400%", desc: "Increase in qualified leads for a Downtown Dubai developer within 3 months via Google Ads." },
-                    { title: "Premium Dental Clinic", metric: "#1 Ranking", desc: "Achieved top local SEO positions for 'Veneers Dubai' and 'Implants' keywords." },
+                    { title: "Luxury Real Estate", metric: "+400%", desc: "Increase in qualified leads for a premium developer within 3 months via Google Ads." },
+                    { title: "Dental Clinic", metric: "#1 Ranking", desc: "Achieved top local SEO positions for competitive keywords, driving massive footfall." },
                     { title: "Fashion Retailer", metric: "12x ROAS", desc: "Generated exceptional returns through a targeted Influencer & Instagram strategy." }
                 ].map((study, idx) => (
                     <div key={idx} className="bg-slate-950 p-8 rounded-2xl border-l-4 border-amber-500 shadow-xl">
@@ -219,13 +248,13 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 <Bot className="w-8 h-8 text-amber-500" />
                 <h2 className="text-3xl md:text-4xl font-bold text-white">Instant Strategy Generator</h2>
               </div>
-              <h3 className="text-xl text-amber-500 mb-4">Complimentary Dubai-focused growth strategy</h3>
+              <h3 className="text-xl text-amber-500 mb-4">Complimentary growth strategy</h3>
               <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                Experience the power of AI-driven insights. Enter your business details to receive a complimentary, high-level marketing strategy tailored for the Dubai market specifically for your niche.
+                Experience the power of AI-driven insights. Tell us about your current challenges, and we will generate a high-level strategy tailored to solve them.
               </p>
               <ul className="space-y-4 mb-8">
                 {[
-                  "Tailored to Dubai market trends",
+                  "Tailored to your specific problem",
                   "Identifies key growth channels",
                   "Provides actionable initial steps"
                 ].map((item, i) => (
@@ -253,7 +282,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                       value={businessName}
                       onChange={(e) => setBusinessName(e.target.value)}
                       className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition-colors placeholder-slate-600"
-                      placeholder="e.g. Marina Luxury Real Estate"
+                      placeholder="e.g. Acme Corp"
                     />
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -265,7 +294,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                         value={industry}
                         onChange={(e) => setIndustry(e.target.value)}
                         className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition-colors placeholder-slate-600"
-                        placeholder="e.g. Hospitality"
+                        placeholder="e.g. Technology"
                       />
                     </div>
                     <div>
@@ -275,32 +304,31 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                         value={audience}
                         onChange={(e) => setAudience(e.target.value)}
                         className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition-colors placeholder-slate-600"
-                        placeholder="e.g. Expats, Tourists"
+                        placeholder="e.g. Professionals"
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-bold text-slate-400 mb-1 uppercase tracking-wider">Phone Number</label>
-                      <input 
-                        type="tel" 
+                  <div>
+                    <label className="block text-xs font-bold text-slate-400 mb-1 uppercase tracking-wider">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      required
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition-colors placeholder-slate-600"
+                      placeholder="+971..."
+                    />
+                  </div>
+                  <div>
+                      <label className="block text-xs font-bold text-slate-400 mb-1 uppercase tracking-wider">What problem are you facing?</label>
+                      <textarea
                         required
-                        value={phoneNumber}
-                        onChange={(e) => setPhoneNumber(e.target.value)}
-                        className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition-colors placeholder-slate-600"
-                        placeholder="+971..."
-                      />
-                    </div>
-                    <div>
-                       <label className="block text-xs font-bold text-slate-400 mb-1 uppercase tracking-wider">Monthly Budget (AED)</label>
-                       <input 
-                        type="text" 
-                        value={marketingSpend}
-                        onChange={(e) => setMarketingSpend(e.target.value)}
-                        className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition-colors placeholder-slate-600"
-                        placeholder="e.g. 10,000"
-                      />
-                    </div>
+                        value={marketingProblem}
+                        onChange={(e) => setMarketingProblem(e.target.value)}
+                        rows={3}
+                        className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-amber-500 transition-colors placeholder-slate-600 resize-none"
+                        placeholder="e.g. Getting traffic but no leads, High ad costs..."
+                      ></textarea>
                   </div>
 
                   <button 
@@ -310,7 +338,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                   >
                     {loading ? (
                       <>
-                        <Sparkles className="w-5 h-5 animate-spin" /> Analyzing Market...
+                        <Sparkles className="w-5 h-5 animate-spin" /> Analyzing Strategy...
                       </>
                     ) : (
                       <>

@@ -8,20 +8,20 @@ export const generateMarketingStrategy = async (
   businessName: string,
   industry: string,
   targetAudience: string,
-  marketingSpend: string
+  marketingProblem: string
 ): Promise<GeneratedStrategy> => {
   try {
     const prompt = `
-      Act as a world-class Digital Marketing Strategist based in Dubai.
+      Act as a world-class Digital Marketing Strategist.
       Create a concise, high-impact 3-point digital marketing strategy for a business with the following details:
       
       Business Name: ${businessName}
       Industry: ${industry}
       Target Audience: ${targetAudience}
-      Estimated Monthly Marketing Budget: ${marketingSpend}
-      Market: Dubai / UAE
+      Current Marketing Challenge: ${marketingProblem}
 
-      Focus on high-ROI activities suitable for the Dubai market (e.g., Luxury focus, Influencer reach, Local SEO) that align with the provided budget.
+      Focus on specific, actionable solutions that directly address their stated challenge.
+      Prioritize high-ROI activities suitable for a competitive market.
       Keep the tone professional, visionary, and persuasive.
     `;
 
@@ -37,7 +37,7 @@ export const generateMarketingStrategy = async (
             points: {
               type: Type.ARRAY,
               items: { type: Type.STRING },
-              description: "3 strategic bullet points"
+              description: "3 strategic bullet points solving their specific problem"
             }
           },
           required: ["title", "points"]

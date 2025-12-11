@@ -12,15 +12,15 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
       id: 'seo',
       title: 'SEO Optimization',
       icon: <Search className="w-12 h-12 text-amber-500" />,
-      description: 'Dominating search results specifically for the UAE market. We optimize for bilingual (Arabic/English) search intent to capture maximum local traffic.',
-      features: ['Technical SEO Audits', 'Local SEO (Google Maps)', 'Multilingual Keyword Strategy', 'Authority Link Building'],
+      description: 'Dominating search results for your target market. We optimize for search intent and technical performance to capture maximum organic traffic.',
+      features: ['Technical SEO Audits', 'Local & Global SEO', 'Keyword Strategy', 'Authority Link Building'],
       link: Page.SERVICE_SEO
     },
     {
       id: 'paid-media',
       title: 'Paid Marketing (PPC)',
       icon: <Target className="w-12 h-12 text-amber-500" />,
-      description: 'Precision-targeted campaigns on Google, YouTube, and Display networks. We maximize your ROAS by targeting high-intent buyers in the region.',
+      description: 'Precision-targeted campaigns on Google, YouTube, and Display networks. We maximize your ROAS by targeting high-intent buyers.',
       features: ['Google Ads Management', 'Retargeting Strategies', 'Programmatic Advertising', 'Conversion Rate Optimization'],
       link: Page.SERVICE_PAID
     },
@@ -28,7 +28,7 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
       id: 'influencer',
       title: 'Influencer Marketing',
       icon: <Users className="w-12 h-12 text-amber-500" />,
-      description: 'Leverage our network of Dubai’s top lifestyle, tech, and business influencers to amplify your brand message authentically.',
+      description: 'Leverage our network of top lifestyle, tech, and business influencers to amplify your brand message authentically.',
       features: ['Influencer Sourcing & Vetting', 'Campaign Management', 'Contract Negotiation', 'Performance Tracking'],
       link: Page.SERVICE_INFLUENCER
     },
@@ -48,7 +48,7 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
       <div className="bg-slate-950 py-16 text-center px-4">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">Our <span className="text-gradient-gold">Services</span></h1>
         <p className="text-xl text-slate-400 max-w-2xl mx-auto">
-          Comprehensive digital solutions designed to elevate your brand's presence in the Middle East.
+          Comprehensive digital solutions designed to elevate your brand's presence in the global market.
         </p>
       </div>
 
@@ -107,7 +107,7 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
                     <h3 className="text-2xl font-bold text-white mb-4">Our Pricing Philosophy</h3>
                     <p className="text-slate-400 leading-relaxed text-lg">
                         We believe in value-based pricing. You don't pay for "hours"; you pay for <strong>results</strong>. 
-                        Every dirham spent is tracked against tangible KPIs—whether that's leads generated, ROAS achieved, or market share gained. 
+                        Every dollar spent is tracked against tangible KPIs—whether that's leads generated, ROAS achieved, or market share gained. 
                         No hidden fees, no retainer bloat. Just clear, performance-driven investment.
                     </p>
                 </div>
@@ -118,10 +118,10 @@ const Services: React.FC<ServicesProps> = ({ onNavigate }) => {
                 </div>
                 <div className="relative z-10">
                     <TrendingUp className="w-10 h-10 text-amber-500 mb-6" />
-                    <h3 className="text-2xl font-bold text-white mb-4">The Dubai Standard</h3>
+                    <h3 className="text-2xl font-bold text-white mb-4">The Premium Standard</h3>
                     <p className="text-slate-400 leading-relaxed text-lg">
                        In a market flooded with low-cost, low-quality agencies, OptimizeHub stands for premium execution. 
-                       We invest in the best tools, local talent, and data sources to ensure your brand is represented 
+                       We invest in the best tools, top talent, and data sources to ensure your brand is represented 
                        at the highest level. Quality is not an expense; it's an asset.
                     </p>
                 </div>

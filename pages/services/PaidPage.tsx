@@ -24,7 +24,7 @@ const PaidPage: React.FC<Props> = ({ onNavigate }) => {
               Instant Traffic. <br/><span className="text-gradient-gold">Measurable ROI.</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Stop wasting budget on clicks that don't convert. We engineer high-precision PPC campaigns on Google, YouTube, and Social Platforms that target high-intent buyers in the UAE.
+              Stop wasting budget on clicks that don't convert. We engineer high-precision PPC campaigns on Google, YouTube, and Social Platforms that target high-intent buyers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://wa.me/9717020895818" target="_blank" rel="noopener noreferrer" className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-8 py-4 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2 transition-all hover:scale-105">
@@ -34,27 +34,27 @@ const PaidPage: React.FC<Props> = ({ onNavigate }) => {
           </div>
           <div className="bg-slate-900 rounded-3xl p-8 border border-slate-800 shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 blur-[50px]"></div>
-             <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-amber-500 pl-4">The Dubai Ad Landscape</h3>
+             <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-amber-500 pl-4">The Ad Landscape</h3>
              <ul className="space-y-6 relative z-10">
                <li className="flex gap-4">
                  <MousePointer2 className="w-10 h-10 text-amber-500 flex-shrink-0" />
                  <div>
                    <h4 className="text-white font-bold text-lg">Cost Efficiency</h4>
-                   <p className="text-slate-400 text-sm mt-1">Dubai CPCs can be high. We use negative keywords and Quality Score optimization to slash your acquisition costs.</p>
+                   <p className="text-slate-400 text-sm mt-1">Industry CPCs can be high. We use negative keywords and Quality Score optimization to slash your acquisition costs.</p>
                  </div>
                </li>
                <li className="flex gap-4">
                  <Target className="w-10 h-10 text-amber-500 flex-shrink-0" />
                  <div>
                    <h4 className="text-white font-bold text-lg">Audience Precision</h4>
-                   <p className="text-slate-400 text-sm mt-1">Target by nationality, income level, and interest to reach the affluent Dubai demographic you actually want.</p>
+                   <p className="text-slate-400 text-sm mt-1">Target by income level, interest, and behavior to reach the affluent demographic you actually want.</p>
                  </div>
                </li>
                <li className="flex gap-4">
                  <Zap className="w-10 h-10 text-amber-500 flex-shrink-0" />
                  <div>
                    <h4 className="text-white font-bold text-lg">Seasonal Mastery</h4>
-                   <p className="text-slate-400 text-sm mt-1">From Ramadan spikes to Dubai Summer Surprises (DSS), we adjust bids to capitalize on market peaks.</p>
+                   <p className="text-slate-400 text-sm mt-1">From holiday spikes to seasonal trends, we adjust bids to capitalize on market peaks.</p>
                  </div>
                </li>
              </ul>
@@ -84,10 +84,10 @@ const PaidPage: React.FC<Props> = ({ onNavigate }) => {
                 </section>
 
                 <section>
-                    <h2 className="text-3xl font-bold text-white mb-6">Why Dubai Businesses Need This</h2>
+                    <h2 className="text-3xl font-bold text-white mb-6">Why Brands Need This</h2>
                     <div className="bg-slate-900 border border-slate-800 rounded-xl p-8">
                         <p className="text-slate-400 leading-relaxed mb-6">
-                            Dubai is a "now" economy. Decisions are made fast. Paid ads put you directly in front of customers exactly when they are searching for your service. Whether it's an expat looking for a new apartment or a tourist searching for fine dining, we ensure you are the first click.
+                            The modern economy is fast. Decisions are made instantly. Paid ads put you directly in front of customers exactly when they are searching for your service. Whether it's a professional looking for B2B solutions or a consumer searching for luxury goods, we ensure you are the first click.
                         </p>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                             <div>
@@ -113,21 +113,21 @@ const PaidPage: React.FC<Props> = ({ onNavigate }) => {
                             <BarChart3 className="w-6 h-6 text-amber-500 mr-4 mt-1" />
                             <div>
                                 <h4 className="text-white font-bold">E-Commerce</h4>
-                                <p className="text-slate-400 text-sm">Shopping ads for fashion, electronics, and beauty products targeting UAE & KSA.</p>
+                                <p className="text-slate-400 text-sm">Shopping ads for fashion, electronics, and beauty products targeting global markets.</p>
                             </div>
                         </div>
                         <div className="flex items-start">
                             <BarChart3 className="w-6 h-6 text-amber-500 mr-4 mt-1" />
                             <div>
                                 <h4 className="text-white font-bold">Real Estate</h4>
-                                <p className="text-slate-400 text-sm">Lead generation forms for off-plan property launches and investor visas.</p>
+                                <p className="text-slate-400 text-sm">Lead generation forms for property launches and investor interest.</p>
                             </div>
                         </div>
                         <div className="flex items-start">
                             <BarChart3 className="w-6 h-6 text-amber-500 mr-4 mt-1" />
                             <div>
                                 <h4 className="text-white font-bold">B2B Services</h4>
-                                <p className="text-slate-400 text-sm">LinkedIn campaigns targeting decision-makers in Dubai Media City and DIFC.</p>
+                                <p className="text-slate-400 text-sm">LinkedIn campaigns targeting decision-makers in major business hubs.</p>
                             </div>
                         </div>
                      </div>
@@ -141,7 +141,7 @@ const PaidPage: React.FC<Props> = ({ onNavigate }) => {
                     <div className="space-y-6">
                         <div>
                             <h4 className="text-white font-semibold text-sm mb-2">What is the minimum budget?</h4>
-                            <p className="text-slate-400 text-xs leading-relaxed">For Dubai, we recommend starting with at least AED 5,000/month in ad spend to get statistically significant data and results.</p>
+                            <p className="text-slate-400 text-xs leading-relaxed">We recommend a healthy starting budget to get statistically significant data and results quickly.</p>
                         </div>
                         <div>
                             <h4 className="text-white font-semibold text-sm mb-2">Google Ads or Social Ads?</h4>

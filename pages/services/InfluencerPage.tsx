@@ -24,7 +24,7 @@ const InfluencerPage: React.FC<Props> = ({ onNavigate }) => {
               Influencers Who <br/><span className="text-gradient-gold">Actually Sell.</span>
             </h1>
             <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              Word of mouth is digital now. We connect you with vetted, high-impact influencers in the UAE who drive real conversations and conversions, not just vanity metrics.
+              Word of mouth is digital now. We connect you with vetted, high-impact influencers who drive real conversations and conversions, not just vanity metrics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="https://wa.me/9717020895818" target="_blank" rel="noopener noreferrer" className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-8 py-4 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2 transition-all hover:scale-105">
@@ -40,7 +40,7 @@ const InfluencerPage: React.FC<Props> = ({ onNavigate }) => {
                  <ShieldCheck className="w-10 h-10 text-amber-500 flex-shrink-0" />
                  <div>
                    <h4 className="text-white font-bold text-lg">Fake Follower Check</h4>
-                   <p className="text-slate-400 text-sm mt-1">We analyze audience authenticity. No bots. No engagement pods. Just real Dubai residents.</p>
+                   <p className="text-slate-400 text-sm mt-1">We analyze audience authenticity. No bots. No engagement pods. Just real audiences.</p>
                  </div>
                </li>
                <li className="flex gap-4">
@@ -53,8 +53,8 @@ const InfluencerPage: React.FC<Props> = ({ onNavigate }) => {
                <li className="flex gap-4">
                  <CheckCircle className="w-10 h-10 text-amber-500 flex-shrink-0" />
                  <div>
-                   <h4 className="text-white font-bold text-lg">NMC Compliance</h4>
-                   <p className="text-slate-400 text-sm mt-1">We ensure all influencers are licensed by the UAE National Media Council to protect your brand legally.</p>
+                   <h4 className="text-white font-bold text-lg">Regulatory Compliance</h4>
+                   <p className="text-slate-400 text-sm mt-1">We ensure all influencers are fully licensed and compliant to protect your brand legally.</p>
                  </div>
                </li>
              </ul>
@@ -84,9 +84,9 @@ const InfluencerPage: React.FC<Props> = ({ onNavigate }) => {
                 </section>
 
                 <section>
-                    <h2 className="text-3xl font-bold text-white mb-6">Why Dubai Trusts Influencers</h2>
+                    <h2 className="text-3xl font-bold text-white mb-6">Why Trust Drives Sales</h2>
                     <p className="text-slate-400 mb-6 leading-relaxed">
-                        In Dubai, trust is currency. Consumers rely heavily on recommendations from personalities they follow. Whether it's a new restaurant opening or a tech product launch, the "Saw it on Instagram" effect is the most powerful driver of footfall and sales in the region.
+                        Trust is currency. Consumers rely heavily on recommendations from personalities they follow. Whether it's a new restaurant opening or a tech product launch, the social proof effect is the most powerful driver of footfall and sales.
                     </p>
                     <div className="bg-slate-900 p-6 rounded-xl border border-slate-800">
                         <h3 className="text-white font-bold mb-2">Micro vs. Mega Influencers</h3>
@@ -128,8 +128,8 @@ const InfluencerPage: React.FC<Props> = ({ onNavigate }) => {
                             <p className="text-slate-400 text-xs leading-relaxed">It varies wildly. Barter collaborations work for some micro-influencers, while celebrities charge premium rates. We negotiate to get you the best value.</p>
                         </div>
                         <div>
-                            <h4 className="text-white font-semibold text-sm mb-2">Is it legal in UAE?</h4>
-                            <p className="text-slate-400 text-xs leading-relaxed">Yes, provided the influencer is licensed. We handle all compliance checks so you don't face any fines.</p>
+                            <h4 className="text-white font-semibold text-sm mb-2">Is it legal?</h4>
+                            <p className="text-slate-400 text-xs leading-relaxed">Yes, provided the influencer is compliant with local regulations. We handle all checks so you don't face any fines.</p>
                         </div>
                         <div>
                             <h4 className="text-white font-semibold text-sm mb-2">How do we measure ROI?</h4>

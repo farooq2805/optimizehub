@@ -40,7 +40,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
             Optimization Meets Ambition: <br/>
             We Are <span className="text-gradient-gold">OptimizeHub</span>,<br/>
-            Your Digital Growth Partner in Dubai.
+            Your Digital Growth Partner.
           </h1>
         </div>
       </div>
@@ -50,20 +50,20 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold text-white mb-6">The Core Identity</h2>
           <p className="text-lg text-slate-300 leading-8">
-            OptimizeHub was founded on one simple principle: <span className="text-amber-500 font-semibold">Marketing spend should always generate measurable profit.</span> In a vibrant, fast-paced market like Dubai and the wider UAE, standing still means falling behind. We are a team of data scientists, creative strategists, and performance marketers dedicated to turning digital potential into tangible ROI.
+            OptimizeHub was founded on one simple principle: <span className="text-amber-500 font-semibold">Marketing spend should always generate measurable profit.</span> In today's competitive digital landscape, standing still means falling behind. We are a team of data scientists, creative strategists, and performance marketers dedicated to turning digital potential into tangible ROI.
           </p>
           <div className="mt-10 flex justify-center gap-4 text-sm font-bold uppercase tracking-widest text-slate-400">
-            <span>Data-Driven</span> • <span>Performance-Focused</span> • <span>Dubai-Centric</span>
+            <span>Data-Driven</span> • <span>Performance-Focused</span> • <span>Results-Centric</span>
           </div>
         </div>
       </section>
 
-      {/* Unique Dubai Edge */}
+      {/* Unique Edge */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-white mb-4">Our Unique Dubai Edge</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">Our Unique Edge</h2>
           <p className="text-slate-400 max-w-3xl mx-auto">
-            What makes OptimizeHub different is our deep understanding of the local ecosystem. We don't just run global campaigns; we build strategies that resonate here, understanding the nuances of:
+            What makes OptimizeHub different is our deep understanding of the digital ecosystem. We don't just run campaigns; we build strategies that resonate, understanding the nuances of:
           </p>
         </div>
 
@@ -71,27 +71,27 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
           {/* Edge 1 */}
           <div className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-colors">
             <Globe2 className="w-10 h-10 text-amber-500 mb-6" />
-            <h3 className="text-xl font-bold text-white mb-4">GCC Media Landscape</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Global Media Landscape</h3>
             <p className="text-slate-400 leading-relaxed">
-              Expertise in platforms and influencers specific to the UAE/GCC region, ensuring cultural relevance and maximum reach.
+              Expertise in platforms and influencers specific to your target markets, ensuring cultural relevance and maximum reach.
             </p>
           </div>
           
           {/* Edge 2 */}
           <div className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-colors">
             <MapPin className="w-10 h-10 text-amber-500 mb-6" />
-            <h3 className="text-xl font-bold text-white mb-4">Local Search Authority</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Search Authority</h3>
             <p className="text-slate-400 leading-relaxed">
-              Mastering local SEO strategies, including Google My Business optimization, crucial for businesses targeting specific Dubai neighborhoods and emirates.
+              Mastering local and global SEO strategies, including Google My Business optimization, crucial for businesses targeting specific regions.
             </p>
           </div>
 
           {/* Edge 3 */}
           <div className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 hover:border-amber-500/50 transition-colors">
             <Target className="w-10 h-10 text-amber-500 mb-6" />
-            <h3 className="text-xl font-bold text-white mb-4">High-Intent Market</h3>
+            <h3 className="text-xl font-bold text-white mb-4">High-Intent Strategy</h3>
             <p className="text-slate-400 leading-relaxed">
-              Focusing on high-value keywords and lead generation strategies essential for local industries (Real Estate, Hospitality, Finance, etc.).
+              Focusing on high-value keywords and lead generation strategies essential for competitive industries (Real Estate, Hospitality, Finance, etc.).
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">Meet the OptimizeHub Team</h2>
-            <p className="text-slate-400">Our leadership is driven by measurable results and deep local insight.</p>
+            <p className="text-slate-400">Our leadership is driven by measurable results and deep industry insight.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -144,11 +144,11 @@ const About: React.FC<AboutProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left mb-16">
             <div className="bg-slate-900/30 p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
                 <h3 className="text-amber-500 font-bold text-xl mb-4">Our Mission</h3>
-                <p className="text-slate-400">To empower local businesses with precision digital marketing solutions, transforming advertising spend into measurable, sustainable growth and maximizing Return on Investment.</p>
+                <p className="text-slate-400">To empower businesses with precision digital marketing solutions, transforming advertising spend into measurable, sustainable growth and maximizing Return on Investment.</p>
             </div>
             <div className="bg-slate-900/30 p-8 rounded-xl border border-slate-800 hover:border-slate-700 transition-colors">
                 <h3 className="text-amber-500 font-bold text-xl mb-4">Our Vision</h3>
-                <p className="text-slate-400">To be recognized as the gold standard for performance-based digital marketing in the UAE and GCC, setting new benchmarks for transparency, innovation, and client success.</p>
+                <p className="text-slate-400">To be recognized as the gold standard for performance-based digital marketing, setting new benchmarks for transparency, innovation, and client success.</p>
             </div>
         </div>
 
