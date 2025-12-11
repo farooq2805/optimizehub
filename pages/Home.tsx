@@ -65,10 +65,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             <span className="text-amber-400 text-sm font-semibold tracking-wide uppercase">Premier Digital Growth Agency</span>
           </div>
           
-          <h1 className="text-5xl md:text-8xl font-bold text-white mb-8 leading-tight tracking-tight min-h-[220px] md:min-h-[300px]">
+          <h1 className="text-5xl md:text-8xl font-bold text-white mb-8 leading-tight tracking-tight min-h-[220px] md:min-h-[340px] flex flex-col justify-center">
             We Deliver <br/>
             <span 
-              className={`text-gradient-gold transition-opacity duration-500 block mt-2 pb-4 ${fade ? 'opacity-100' : 'opacity-0'}`}
+              className={`text-gradient-gold transition-opacity duration-500 block mt-4 pb-2 ${fade ? 'opacity-100' : 'opacity-0'}`}
             >
               {heroWords[currentWordIndex]}
             </span>
@@ -97,7 +97,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
               WhatsApp Us
             </a>
           </div>
-          <p className="mt-12 text-slate-500 text-xs tracking-[0.2em] uppercase animate-bounce">Scroll to Explore</p>
+          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <p className="text-slate-500 text-xs tracking-[0.2em] uppercase mb-2">Scroll to Explore</p>
+            <div className="w-1 h-8 bg-gradient-to-b from-amber-500 to-transparent mx-auto rounded-full"></div>
+          </div>
         </div>
       </section>
 
