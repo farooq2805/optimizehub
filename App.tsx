@@ -12,6 +12,8 @@ import SeoPage from './pages/services/SeoPage';
 import PaidPage from './pages/services/PaidPage';
 import SocialPage from './pages/services/SocialPage';
 import InfluencerPage from './pages/services/InfluencerPage';
+import HealthcarePage from './pages/services/HealthcarePage';
+import SalonPage from './pages/services/SalonPage';
 import { Page } from './types';
 
 const App: React.FC = () => {
@@ -42,13 +44,17 @@ const App: React.FC = () => {
         return <SocialPage onNavigate={setCurrentPage} />;
       case Page.SERVICE_INFLUENCER:
         return <InfluencerPage onNavigate={setCurrentPage} />;
+      case Page.SERVICE_HEALTHCARE:
+        return <HealthcarePage onNavigate={setCurrentPage} />;
+      case Page.SERVICE_SALON:
+        return <SalonPage onNavigate={setCurrentPage} />;
       default:
         return <Home onNavigate={setCurrentPage} />;
     }
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-amber-500/30">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-primary-100">
       <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
       <WhatsAppFloat />
       <main className="fade-in">

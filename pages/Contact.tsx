@@ -17,95 +17,87 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen py-10 md:py-24 bg-slate-950 relative overflow-hidden">
-      {/* Decorative Blur */}
-      <div className="absolute top-0 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-amber-500/5 rounded-full blur-[80px] md:blur-[120px]"></div>
+    <div className="min-h-screen py-16 md:py-24 bg-white relative overflow-hidden">
+      {/* Soft Decorative Blur */}
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary-50 rounded-full blur-[120px] opacity-60"></div>
 
       <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-24 items-center">
           
           {/* Direct Value Side */}
           <div>
-            <h1 className="text-4xl md:text-6xl font-black text-white mb-6 md:mb-8 leading-tight">
+            <h1 className="text-4xl md:text-7xl font-black text-slate-900 mb-8 leading-tight">
               Let's Fix Your <br/>
-              <span className="text-gradient-gold">Growth Engine.</span>
+              <span className="text-gradient-brand">Growth Engine.</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 md:mb-12 leading-relaxed">
+            <p className="text-xl text-slate-500 mb-12 leading-relaxed">
               Don't fill out a form to get a generic sales deck. Get a direct audit of your current marketing channels from a senior specialist.
             </p>
 
-            <div className="space-y-6 md:space-y-10">
-              <div className="flex items-start gap-4 md:gap-6">
-                <div className="bg-amber-500/10 p-3 md:p-4 rounded-2xl">
-                  <Calendar className="w-6 h-6 md:w-8 h-8 text-amber-500" />
+            <div className="space-y-10">
+              <div className="flex items-start gap-6">
+                <div className="bg-primary-50 p-4 rounded-2xl">
+                  <Calendar className="w-8 h-8 text-primary-600" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-lg md:text-xl">Quick Call (15-30 min)</h3>
-                  <p className="text-slate-400 mt-1 md:mt-2 text-sm md:text-base">No hard sales. We look at your goals, your current spend, and tell you if we can help.</p>
+                  <h3 className="text-slate-900 font-bold text-xl">Quick Call (15-30 min)</h3>
+                  <p className="text-slate-500 mt-2">No hard sales. We look at your goals, your current spend, and tell you if we can help.</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4 md:gap-6">
-                <div className="bg-amber-500/10 p-3 md:p-4 rounded-2xl">
-                  <ShieldCheck className="w-6 h-6 md:w-8 h-8 text-amber-500" />
+              <div className="flex items-start gap-6">
+                <div className="bg-primary-50 p-4 rounded-2xl">
+                  <ShieldCheck className="w-8 h-8 text-primary-600" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-lg md:text-xl">Audit included</h3>
-                  <p className="text-slate-400 mt-1 md:mt-2 text-sm md:text-base">We'll identify at least 3 areas where you're wasting budget right now.</p>
+                  <h3 className="text-slate-900 font-bold text-xl">Audit included</h3>
+                  <p className="text-slate-500 mt-2">We'll identify at least 3 areas where you're wasting budget right now.</p>
                 </div>
               </div>
 
-              <div className="pt-6 md:pt-10 border-t border-slate-800">
-                <div className="flex items-center gap-4 md:gap-6 mb-6">
-                  <div className="flex -space-x-2 md:-space-x-3">
-                    {[1,2,3].map(i => (
-                      <div key={i} className="w-8 h-8 md:w-10 h-10 rounded-full border-2 border-slate-950 bg-slate-800"></div>
-                    ))}
-                  </div>
-                  <p className="text-slate-500 text-xs md:text-sm">Join 50+ businesses scaling in Dubai.</p>
-                </div>
-                <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-8 text-slate-500 font-bold uppercase tracking-widest text-[10px] md:text-xs">
-                  <div className="flex items-center gap-2"><Phone className="w-4 h-4"/> +971 50 597 5089</div>
-                  <div className="flex items-center gap-2"><Mail className="w-4 h-4"/> hello@optimizehub.co</div>
+              <div className="pt-10 border-t border-slate-100">
+                <div className="flex flex-col sm:flex-row gap-6 md:gap-10 text-slate-400 font-bold uppercase tracking-widest text-xs">
+                  <div className="flex items-center gap-2 text-slate-700"><Phone className="w-4 h-4 text-primary-500"/> +971 50 597 5089</div>
+                  <div className="flex items-center gap-2 text-slate-700"><Mail className="w-4 h-4 text-primary-500"/> hello@optimizehub.co</div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* High-Impact Form */}
-          <div className="bg-slate-900 p-6 md:p-10 rounded-3xl md:rounded-[2.5rem] border border-slate-800 shadow-2xl relative">
-            <h2 className="text-xl md:text-2xl font-bold text-white mb-6 md:mb-8">Request Your Free Audit</h2>
-            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          {/* Clean Form */}
+          <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border border-slate-100 shadow-2xl shadow-slate-200/50 relative">
+            <h2 className="text-2xl font-bold text-slate-900 mb-8">Request Your Free Audit</h2>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-widest">Name</label>
+                  <label className="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Name</label>
                   <input
                     type="text"
                     required
                     placeholder="Full Name"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 md:py-4 text-white focus:outline-none focus:border-amber-500 transition-colors text-sm md:text-base"
+                    className="w-full bg-slate-50 border border-slate-100 rounded-xl px-4 py-4 text-slate-900 focus:outline-none focus:border-primary-500 focus:bg-white transition-all shadow-inner"
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-widest">Phone</label>
+                  <label className="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Phone</label>
                   <input
                     type="tel"
                     required
                     placeholder="+971..."
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 md:py-4 text-white focus:outline-none focus:border-amber-500 transition-colors text-sm md:text-base"
+                    className="w-full bg-slate-50 border border-slate-100 rounded-xl px-4 py-4 text-slate-900 focus:outline-none focus:border-primary-500 focus:bg-white transition-all shadow-inner"
                   />
                 </div>
               </div>
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-widest">Business Stage</label>
+                <label className="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">Business Stage</label>
                 <select
                   value={formData.revenue}
                   onChange={(e) => setFormData({...formData, revenue: e.target.value})}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 md:py-4 text-white focus:outline-none focus:border-amber-500 transition-colors text-sm md:text-base"
+                  className="w-full bg-slate-50 border border-slate-100 rounded-xl px-4 py-4 text-slate-900 focus:outline-none focus:border-primary-500 focus:bg-white transition-all shadow-inner"
                 >
                   <option value="new">New Business / Startup</option>
                   <option value="scaling">Existing Business Scaling</option>
@@ -113,24 +105,24 @@ const Contact: React.FC = () => {
                 </select>
               </div>
               <div>
-                <label className="block text-[10px] font-bold text-slate-500 mb-1.5 uppercase tracking-widest">What's your biggest hurdle?</label>
+                <label className="block text-[10px] font-bold text-slate-400 mb-2 uppercase tracking-widest">What's your biggest hurdle?</label>
                 <textarea
                   rows={3}
                   placeholder="e.g. Getting traffic but no leads..."
                   value={formData.message}
                   onChange={(e) => setFormData({...formData, message: e.target.value})}
-                  className="w-full bg-slate-950 border border-slate-800 rounded-xl px-4 py-3 md:py-4 text-white focus:outline-none focus:border-amber-500 transition-colors resize-none text-sm md:text-base"
+                  className="w-full bg-slate-50 border border-slate-100 rounded-xl px-4 py-4 text-slate-900 focus:outline-none focus:border-primary-500 focus:bg-white transition-all shadow-inner resize-none"
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full bg-amber-500 hover:bg-amber-600 text-slate-950 font-black py-4 md:py-5 rounded-xl transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-3 text-base md:text-lg"
+                className="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-5 rounded-xl transition-all shadow-lg shadow-primary-500/20 flex items-center justify-center gap-3 text-lg"
               >
                 Book My Audit Now <Send className="w-5 h-5" />
               </button>
               <div className="flex items-center justify-center gap-2 mt-4">
                  <MessageCircle className="w-4 h-4 text-[#25D366]" />
-                 <span className="text-slate-500 text-[10px] md:text-sm italic">Submits directly to our WhatsApp</span>
+                 <span className="text-slate-400 text-xs italic">Submits directly to our WhatsApp</span>
               </div>
             </form>
           </div>

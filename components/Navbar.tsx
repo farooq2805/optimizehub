@@ -23,7 +23,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   };
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+    <nav className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-lg border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
@@ -31,8 +31,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
             className="flex-shrink-0 flex items-center cursor-pointer"
             onClick={() => handleNav(Page.HOME)}
           >
-            <span className="font-bold text-3xl tracking-tight text-white">
-              Optimize<span className="text-amber-500">Hub</span>
+            <span className="font-bold text-2xl tracking-tight text-slate-900">
+              Optimize<span className="text-brand-gold">Hub</span>
             </span>
           </div>
 
@@ -42,10 +42,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
               <button
                 key={item.value}
                 onClick={() => handleNav(item.value)}
-                className={`text-sm uppercase tracking-widest transition-colors duration-200 ${
+                className={`text-sm font-medium transition-colors duration-200 ${
                   currentPage === item.value
-                    ? 'text-amber-500 font-semibold'
-                    : 'text-slate-400 hover:text-white'
+                    ? 'text-primary-600'
+                    : 'text-slate-500 hover:text-slate-900'
                 }`}
               >
                 {item.label}
@@ -57,7 +57,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           <div className="hidden md:flex">
              <button 
                 onClick={() => handleNav(Page.CONTACT)}
-                className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-6 py-2 rounded-full font-bold text-sm transition-transform hover:scale-105"
+                className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all hover:shadow-lg hover:shadow-primary-500/20 active:scale-95"
              >
                Get Started
              </button>
@@ -67,9 +67,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-slate-300 hover:text-white"
+              className="text-slate-600 hover:text-slate-900 p-2"
             >
-              {isOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -77,21 +77,29 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-slate-950 border-b border-slate-800">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-white border-b border-slate-100 shadow-xl">
+          <div className="px-4 pt-2 pb-6 space-y-1">
             {navItems.map((item) => (
               <button
                 key={item.value}
                 onClick={() => handleNav(item.value)}
-                className={`block w-full text-left px-3 py-4 rounded-md text-base font-medium ${
+                className={`block w-full text-left px-3 py-4 rounded-xl text-base font-semibold ${
                    currentPage === item.value
-                    ? 'text-amber-500 bg-slate-900'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-900'
+                    ? 'text-primary-600 bg-primary-50'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50'
                 }`}
               >
                 {item.label}
               </button>
             ))}
+            <div className="pt-4">
+               <button 
+                  onClick={() => handleNav(Page.CONTACT)}
+                  className="w-full bg-primary-600 text-white py-4 rounded-xl font-bold"
+               >
+                 Get Started
+               </button>
+            </div>
           </div>
         </div>
       )}

@@ -10,6 +10,8 @@ export enum Page {
   SERVICE_PAID = 'service_paid',
   SERVICE_INFLUENCER = 'service_influencer',
   SERVICE_SOCIAL = 'service_social',
+  SERVICE_HEALTHCARE = 'service_healthcare',
+  SERVICE_SALON = 'service_salon',
 }
 
 export interface ServiceItem {

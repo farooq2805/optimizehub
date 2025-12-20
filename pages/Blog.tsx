@@ -39,47 +39,47 @@ const Blog: React.FC<BlogProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <div className="min-h-screen py-24">
+    <div className="min-h-screen py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">OptimizeHub <span className="text-gradient-gold">Insights</span></h1>
-          <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 tracking-tight">Optimize<span className="text-brand-gold">Hub</span> <span className="text-gradient-brand">Insights</span></h1>
+          <p className="text-xl text-slate-500 max-w-2xl mx-auto">
             Expert analysis, trends, and strategies for the digital landscape.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {posts.map((post, idx) => (
-            <div key={idx} className="bg-slate-900 border border-slate-800 rounded-2xl p-8 hover:border-amber-500 transition-colors group cursor-pointer">
-              <div className="flex items-center gap-4 text-sm text-slate-500 mb-4">
-                <span className="text-amber-500 font-semibold uppercase tracking-wider">{post.category}</span>
+            <div key={idx} className="bg-slate-50 border border-slate-100 rounded-3xl p-8 hover:border-primary-200 hover:bg-white transition-all group cursor-pointer shadow-sm">
+              <div className="flex items-center gap-4 text-sm text-slate-400 mb-4">
+                <span className="text-primary-600 font-bold uppercase tracking-wider">{post.category}</span>
                 <span>•</span>
                 <span className="flex items-center gap-1"><Calendar className="w-3 h-3"/> {post.date}</span>
               </div>
-              <h2 className="text-2xl font-bold text-white mb-4 group-hover:text-amber-500 transition-colors">{post.title}</h2>
-              <p className="text-slate-400 mb-6 leading-relaxed">{post.excerpt}</p>
-              <div className="flex justify-between items-center border-t border-slate-800 pt-6">
-                <div className="flex items-center gap-2 text-slate-400 text-sm">
+              <h2 className="text-2xl font-bold text-slate-900 mb-4 group-hover:text-primary-600 transition-colors">{post.title}</h2>
+              <p className="text-slate-500 mb-6 leading-relaxed">{post.excerpt}</p>
+              <div className="flex justify-between items-center border-t border-slate-100 pt-6">
+                <div className="flex items-center gap-2 text-slate-500 text-sm">
                   <User className="w-4 h-4" /> {post.author}
                 </div>
-                <span className="text-white font-semibold flex items-center gap-2 group-hover:translate-x-2 transition-transform">Read Article <ArrowRight className="w-4 h-4"/></span>
+                <span className="text-slate-900 font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform">Read Article <ArrowRight className="w-4 h-4 text-primary-600"/></span>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-3xl p-12 text-center border border-slate-700">
-          <h2 className="text-3xl font-bold text-white mb-4">Stay Ahead of the Curve</h2>
-          <p className="text-slate-400 mb-8 max-w-xl mx-auto">Subscribe to our newsletter for the latest marketing trends delivered straight to your inbox.</p>
+        <div className="bg-slate-50 rounded-[3rem] p-12 text-center border border-slate-100">
+          <h2 className="text-3xl font-black text-slate-900 mb-4">Stay Ahead of the Curve</h2>
+          <p className="text-slate-500 mb-8 max-w-xl mx-auto font-medium">Subscribe to our newsletter for the latest marketing trends delivered straight to your inbox.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto mb-8">
             <input 
               type="email" 
               placeholder="Enter your email" 
-              className="bg-slate-950 border border-slate-700 rounded-lg px-6 py-3 text-white focus:border-amber-500 focus:outline-none w-full"
+              className="bg-white border border-slate-200 rounded-xl px-6 py-4 text-slate-900 focus:border-primary-500 focus:outline-none w-full shadow-inner"
             />
-            <button className="bg-amber-500 text-slate-950 font-bold px-8 py-3 rounded-lg hover:bg-amber-600 transition-colors">Subscribe</button>
+            <button className="bg-primary-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-primary-700 transition-colors">Subscribe</button>
           </div>
-          <button onClick={() => onNavigate(Page.CONTACT)} className="text-slate-400 hover:text-white underline text-sm">
+          <button onClick={() => onNavigate(Page.CONTACT)} className="text-slate-400 hover:text-slate-900 font-medium underline text-sm">
             Or book a strategy call directly
           </button>
         </div>

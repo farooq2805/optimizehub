@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Page, GeneratedStrategy } from '../types';
-import { TrendingUp, Users, Target, BarChart3, Bot, Sparkles, CheckCircle2, ArrowRight, Star, Quote, Zap, ShieldCheck } from 'lucide-react';
-import { generateMarketingStrategy } from '../services/geminiService';
+import { Target, ArrowRight, Star, Quote, Zap, ShieldCheck } from 'lucide-react';
 
 interface HomeProps {
   onNavigate: (page: Page) => void;
@@ -11,7 +10,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
   const [strategy, setStrategy] = useState<GeneratedStrategy | null>(null);
   const [loading, setLoading] = useState(false);
 
-  // Hero Animation Logic - Refined for Business Owners
   const bitterTruths = [
     "Followers Are Not Customers.",
     "Impressions Won't Scale You.",
@@ -34,34 +32,40 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section: The Bitter Truth */}
-      <section className="relative min-h-[80vh] md:h-[90vh] flex items-center justify-center overflow-hidden py-12">
-        <div className="absolute inset-0 bg-slate-950">
-          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/20 via-transparent to-transparent"></div>
+      {/* Hero Section: The Bitter Truth - Refined Pastel */}
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-12 bg-white">
+        {/* Soft Mesh Gradients */}
+        <div className="absolute top-0 left-0 w-full h-full opacity-40 pointer-events-none">
+          <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-100 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-50 rounded-full blur-[120px]"></div>
         </div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
-          <div className="inline-block px-4 py-1 mb-4 md:mb-6 border border-amber-500/30 rounded-full bg-amber-500/10 backdrop-blur-sm">
-            <span className="text-amber-400 text-xs md:text-sm font-bold tracking-widest uppercase">The Performance Agency</span>
+          <div className="inline-block px-4 py-1.5 mb-6 border border-primary-100 rounded-full bg-primary-50">
+            <span className="text-primary-600 text-xs md:text-sm font-bold tracking-widest uppercase">The Performance Agency</span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl md:text-8xl font-black text-white mb-8 md:mb-12 leading-tight tracking-tighter">
-            <span className={`block transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 mb-8 md:mb-10 leading-tight tracking-tighter">
+            <span className={`block transition-opacity duration-500 min-h-[1.2em] ${fade ? 'opacity-100' : 'opacity-0'}`}>
               {bitterTruths[currentWordIndex]}
             </span>
-            <span className="text-gradient-gold">We Deliver Profits.</span>
+            <span className="text-gradient-brand">We Deliver Profits.</span>
           </h1>
+
+          <p className="text-slate-500 text-lg md:text-xl max-w-2xl mx-auto mb-10 md:mb-12">
+            No vanity metrics. No technical jargon. Just predictable, scalable business growth for ambitious brands.
+          </p>
 
           <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center items-center">
             <button 
               onClick={() => onNavigate(Page.CONTACT)}
-              className="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl transition-all hover:scale-105 shadow-2xl shadow-amber-500/20 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto bg-primary-600 hover:bg-primary-700 text-white px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-xl shadow-primary-500/20 flex items-center justify-center gap-2"
             >
-              Book a Free Profit Audit <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
+              Book a Free Profit Audit <ArrowRight className="w-5 h-5" />
             </button>
             <a 
               href="https://wa.me/971505975089"
-              className="w-full sm:w-auto text-white hover:text-amber-500 px-8 md:px-10 py-4 md:py-5 rounded-full font-bold text-base md:text-lg transition-all border border-slate-700 hover:border-amber-500 bg-slate-900/40 backdrop-blur-md flex justify-center"
+              className="w-full sm:w-auto text-slate-600 hover:text-slate-900 px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-lg transition-all border border-slate-200 hover:border-slate-300 bg-white shadow-sm flex justify-center"
             >
               Chat with a Human
             </a>
@@ -69,23 +73,23 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Trust & Real Results */}
-      <section className="py-12 md:py-20 bg-slate-900 border-y border-slate-800">
+      {/* Trust & Real Results - Clean White */}
+      <section className="py-16 md:py-24 bg-slate-50 border-y border-slate-100">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 md:gap-16 items-center">
             <div className="text-center lg:text-left">
-              <h2 className="text-3xl font-bold text-white mb-4">Actual Results, <br/><span className="text-amber-500">No Fluff.</span></h2>
-              <p className="text-slate-400">While others show you charts of 'Followers', we show you charts of 'Qualified Leads'.</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Actual Results, <br/><span className="text-primary-600">No Fluff.</span></h2>
+              <p className="text-slate-500">While others show you charts of 'Followers', we show you charts of 'Qualified Leads' and 'Net Revenue'.</p>
             </div>
-            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 { label: "Real Estate Developer", result: "420% Increase in Direct Bookings", sub: "Via targeted intent-based ads" },
                 { label: "Dental Clinic Chain", result: "180 New Patients / Month", sub: "Via Local SEO & Map Domination" }
               ].map((res, i) => (
-                <div key={i} className="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col justify-center">
-                   <div className="text-amber-500 font-bold text-[10px] md:text-xs uppercase mb-2">{res.label}</div>
-                   <div className="text-xl md:text-2xl font-bold text-white mb-1">{res.result}</div>
-                   <div className="text-slate-500 text-xs md:text-sm">{res.sub}</div>
+                <div key={i} className="bg-white p-8 rounded-3xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
+                   <div className="text-primary-500 font-bold text-xs uppercase mb-3">{res.label}</div>
+                   <div className="text-xl md:text-2xl font-black text-slate-900 mb-2">{res.result}</div>
+                   <div className="text-slate-400 text-sm">{res.sub}</div>
                 </div>
               ))}
             </div>
@@ -94,41 +98,44 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
       </section>
 
       {/* Simple Services: What's in it for you? */}
-      <section className="py-16 md:py-24 bg-slate-950">
+      <section className="py-20 md:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">How We Make You Money</h2>
-            <p className="text-slate-400 max-w-2xl mx-auto text-base md:text-lg">Marketing is simple when you focus on the right things.</p>
+          <div className="text-center mb-16 md:mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">How We Make You Money</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto text-lg">Marketing is simple when you focus on the right things.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             {[
               { 
-                icon: <Target className="w-8 h-8 md:w-10 h-10" />, 
+                icon: <Target className="w-8 h-8" />, 
                 title: "Get Found When They Search", 
                 benefit: "SEO isn't just ranking; it's being the first answer when a customer has a problem. We put you in front of people ready to buy today.",
-                cta: "Own Google" 
+                cta: "Own Google",
+                color: "bg-blue-50 text-blue-600"
               },
               { 
-                icon: <Zap className="w-8 h-8 md:w-10 h-10" />, 
+                icon: <Zap className="w-8 h-8" />, 
                 title: "Scale Your Sales with Ads", 
                 benefit: "Don't 'boost posts'. We build high-precision systems that turn $1 of ad spend into $4+ of revenue. Predictable. Scalable. Profitable.",
-                cta: "Start Scaling" 
+                cta: "Start Scaling",
+                color: "bg-indigo-50 text-indigo-600"
               },
               { 
-                icon: <ShieldCheck className="w-8 h-8 md:w-10 h-10" />, 
+                icon: <ShieldCheck className="w-8 h-8" />, 
                 title: "Build A Brand They Trust", 
                 benefit: "If your social media looks cheap, your product feels cheap. We create premium content that makes customers choose you over the competition.",
-                cta: "Upgrade Brand" 
+                cta: "Upgrade Brand",
+                color: "bg-teal-50 text-teal-600"
               },
             ].map((s, idx) => (
-              <div key={idx} className="bg-slate-900 p-8 md:p-10 rounded-3xl border border-slate-800 hover:border-amber-500 transition-all group">
-                <div className="mb-4 md:mb-6 text-amber-500 group-hover:scale-110 transition-transform inline-block">
+              <div key={idx} className="bg-white p-10 rounded-[2.5rem] border border-slate-100 hover:border-primary-200 transition-all group hover:shadow-2xl hover:shadow-primary-500/5">
+                <div className={`w-16 h-16 rounded-2xl ${s.color} flex items-center justify-center mb-8 group-hover:scale-110 transition-transform`}>
                   {s.icon}
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 md:mb-4">{s.title}</h3>
-                <p className="text-slate-400 mb-6 md:mb-8 leading-relaxed text-sm md:text-base">{s.benefit}</p>
-                <button onClick={() => onNavigate(Page.CONTACT)} className="flex items-center gap-2 text-amber-500 font-bold group-hover:gap-4 transition-all uppercase text-xs md:text-sm tracking-widest">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{s.title}</h3>
+                <p className="text-slate-500 mb-8 leading-relaxed">{s.benefit}</p>
+                <button onClick={() => onNavigate(Page.CONTACT)} className="flex items-center gap-2 text-primary-600 font-bold group-hover:gap-4 transition-all uppercase text-sm tracking-widest">
                   {s.cta} <ArrowRight className="w-4 h-4" />
                 </button>
               </div>
@@ -137,17 +144,17 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Human Proof: Testimonials */}
-      <section className="py-16 md:py-24 bg-slate-900 border-t border-slate-800 overflow-hidden">
+      {/* Human Proof: Testimonials - Soft & Warm */}
+      <section className="py-20 md:py-32 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Word on the Street</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Word on the Street</h2>
             <div className="flex justify-center gap-1">
-              {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 md:w-5 h-5 fill-amber-500 text-amber-500" />)}
+              {[1,2,3,4,5].map(i => <Star key={i} className="w-5 h-5 fill-primary-500 text-primary-500" />)}
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               { 
                 quote: "I was tired of agencies sending me 50-page reports that meant nothing. OptimizeHub just focused on my sales. My revenue doubled in 4 months.",
@@ -165,16 +172,16 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 role: "Hospitality CEO"
               }
             ].map((t, i) => (
-              <div key={i} className="bg-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800 relative">
-                <Quote className="absolute top-4 right-4 md:top-6 md:right-6 w-6 h-6 md:w-8 h-8 text-amber-500/20" />
-                <p className="text-slate-300 italic mb-6 leading-relaxed text-sm md:text-base">"{t.quote}"</p>
+              <div key={i} className="bg-white p-8 rounded-3xl shadow-sm relative border border-slate-100">
+                <Quote className="absolute top-6 right-6 w-8 h-8 text-primary-100" />
+                <p className="text-slate-600 italic mb-8 leading-relaxed text-lg">"{t.quote}"</p>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center font-bold text-amber-500">
+                  <div className="w-12 h-12 rounded-full bg-primary-50 flex items-center justify-center font-bold text-primary-600">
                     {t.author[0]}
                   </div>
                   <div>
-                    <div className="text-white font-bold text-sm md:text-base">{t.author}</div>
-                    <div className="text-slate-500 text-[10px] md:text-xs">{t.role}</div>
+                    <div className="text-slate-900 font-bold">{t.author}</div>
+                    <div className="text-slate-400 text-xs">{t.role}</div>
                   </div>
                 </div>
               </div>
@@ -183,23 +190,22 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-slate-950 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent"></div>
+      {/* CTA Section - Bold & High Contrast */}
+      <section className="py-24 md:py-32 bg-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 md:mb-8">Ready to Stop Guessing?</h2>
-          <p className="text-lg md:text-xl text-slate-400 mb-8 md:mb-12">
+          <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-8">Ready to Stop Guessing?</h2>
+          <p className="text-xl text-slate-500 mb-12 max-w-2xl mx-auto">
             Most agencies will ask for a 12-month contract. We just ask for 30 minutes. Let’s look at your numbers and see where you're losing money.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <button 
                onClick={() => onNavigate(Page.CONTACT)}
-               className="w-full sm:w-auto bg-amber-500 hover:bg-amber-600 text-slate-950 px-8 md:px-12 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl shadow-xl shadow-amber-500/30 transition-transform hover:scale-105"
+               className="bg-primary-600 hover:bg-primary-700 text-white px-12 py-5 rounded-full font-bold text-xl shadow-2xl shadow-primary-500/30 transition-all hover:scale-105"
             >
               Request Free Consultation
             </button>
           </div>
-          <p className="mt-8 text-slate-500 text-xs md:text-sm px-4">No sales pitch. Just data and a strategy you can use with or without us.</p>
+          <p className="mt-10 text-slate-400 text-sm">No sales pitch. Just data and a strategy you can use with or without us.</p>
         </div>
       </section>
     </div>

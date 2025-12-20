@@ -8,53 +8,53 @@ interface Props {
 
 const SocialPage: React.FC<Props> = ({ onNavigate }) => {
   return (
-    <div className="min-h-screen py-20 bg-slate-950">
+    <div className="min-h-screen py-10 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <button onClick={() => onNavigate(Page.SERVICES)} className="flex items-center text-slate-400 hover:text-amber-500 mb-8 transition-colors">
-          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Services
+        <button onClick={() => onNavigate(Page.SERVICES)} className="flex items-center text-slate-400 hover:text-primary-600 mb-6 md:mb-10 transition-colors text-sm font-bold group">
+          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" /> Back to Services
         </button>
 
         {/* Hero */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24 items-center">
-          <div>
-            <div className="inline-block px-4 py-1 mb-4 border border-amber-500/30 rounded-full bg-amber-500/10">
-                <span className="text-amber-400 text-xs font-bold tracking-widest uppercase">Creative & Strategy</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 mb-16 md:mb-24 items-center">
+          <div className="max-w-2xl">
+            <div className="inline-block px-4 py-1 mb-4 border border-primary-100 rounded-full bg-primary-50">
+                <span className="text-primary-600 text-[10px] md:text-xs font-bold tracking-widest uppercase">Creative & Strategy</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Social Media That <br/><span className="text-gradient-gold">Captivates Audiences.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 mb-6 leading-[1.1] tracking-tight">
+              Social Media That <span className="text-gradient-brand">Captivates Audiences</span>
             </h1>
-            <p className="text-xl text-slate-300 mb-8 leading-relaxed">
-              In a world driven by aesthetics and status, your social presence is your digital storefront. We build premium, engaging brands on Instagram, TikTok, Snapchat, and LinkedIn.
+            <p className="text-lg md:text-xl text-slate-500 mb-8 leading-relaxed font-medium">
+              In a world driven by aesthetics and status, your social presence is your digital storefront. We build premium, engaging brands across all major platforms.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="https://wa.me/971505975089" target="_blank" rel="noopener noreferrer" className="bg-amber-500 hover:bg-amber-600 text-slate-950 px-8 py-4 rounded-full font-bold text-lg inline-flex items-center justify-center gap-2 transition-all hover:scale-105">
+              <a href="https://wa.me/971505975089" target="_blank" rel="noopener noreferrer" className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-full font-bold text-base md:text-lg inline-flex items-center justify-center gap-2 transition-all hover:scale-105 shadow-lg shadow-primary-500/20">
                 <MessageCircle className="w-5 h-5"/> Start Your Growth
               </a>
             </div>
           </div>
-          <div className="bg-slate-900 rounded-3xl p-8 border border-slate-800 shadow-2xl relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 blur-[50px]"></div>
-             <h3 className="text-2xl font-bold text-white mb-8 border-l-4 border-amber-500 pl-4">The Premium Standard</h3>
-             <ul className="space-y-6 relative z-10">
+          <div className="bg-slate-50 rounded-[2.5rem] p-6 md:p-10 border border-slate-100 shadow-sm relative overflow-hidden">
+             <div className="absolute top-0 right-0 w-32 h-32 bg-primary-100/30 blur-[50px]"></div>
+             <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-6 md:mb-8 border-l-4 border-primary-500 pl-4">The Premium Standard</h3>
+             <ul className="space-y-6 md:space-y-8 relative z-10">
                <li className="flex gap-4">
-                 <Image className="w-10 h-10 text-amber-500 flex-shrink-0" />
+                 <Image className="w-8 h-8 md:w-10 md:h-10 text-primary-600 flex-shrink-0" />
                  <div>
-                   <h4 className="text-white font-bold text-lg">Visual Excellence</h4>
-                   <p className="text-slate-400 text-sm mt-1">Modern audiences expect high-production value. We deliver cinema-quality reels, photography, and motion graphics.</p>
+                   <h4 className="text-slate-900 font-bold text-base md:text-lg">Visual Excellence</h4>
+                   <p className="text-slate-500 text-xs md:text-sm mt-1 font-medium">Modern audiences expect cinema-quality reels, photography, and motion graphics that define your brand voice.</p>
                  </div>
                </li>
                <li className="flex gap-4">
-                 <Heart className="w-10 h-10 text-amber-500 flex-shrink-0" />
+                 <Heart className="w-8 h-8 md:w-10 md:h-10 text-primary-600 flex-shrink-0" />
                  <div>
-                   <h4 className="text-white font-bold text-lg">Community Building</h4>
-                   <p className="text-slate-400 text-sm mt-1">Turning followers into advocates. We manage comments, DMs, and engagement to build real loyalty.</p>
+                   <h4 className="text-slate-900 font-bold text-base md:text-lg">Community Building</h4>
+                   <p className="text-slate-500 text-xs md:text-sm mt-1 font-medium">Turning followers into advocates by managing comments, DMs, and engagement to build authentic loyalty.</p>
                  </div>
                </li>
                <li className="flex gap-4">
-                 <PenTool className="w-10 h-10 text-amber-500 flex-shrink-0" />
+                 <PenTool className="w-8 h-8 md:w-10 md:h-10 text-primary-600 flex-shrink-0" />
                  <div>
-                   <h4 className="text-white font-bold text-lg">Platform Expertise</h4>
-                   <p className="text-slate-400 text-sm mt-1">Knowing that platform nuance is key, whether for LinkedIn B2B or Instagram lifestyle.</p>
+                   <h4 className="text-slate-900 font-bold text-base md:text-lg">Platform Nuance</h4>
+                   <p className="text-slate-500 text-xs md:text-sm mt-1 font-medium">Tailoring content strategies specifically for the unique cultures of LinkedIn, Instagram, and TikTok.</p>
                  </div>
                </li>
              </ul>
@@ -62,21 +62,21 @@ const SocialPage: React.FC<Props> = ({ onNavigate }) => {
         </div>
 
         {/* Deep Dive */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-24">
-            <div className="md:col-span-2 space-y-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 mb-16 md:mb-24">
+            <div className="md:col-span-2 space-y-16 md:space-y-24">
                 <section>
-                    <h2 className="text-3xl font-bold text-white mb-6">Full-Service Management</h2>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-8 md:mb-10 tracking-tight">Full-Service Management</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {[
                             "Social Strategy & Content Calendars",
                             "Reels & TikTok Video Production",
-                            "Community Management (Reply/Engage)",
+                            "Community Management (24/7 Response)",
                             "Graphic Design & Branding",
                             "Paid Social Ad Integration",
                             "Monthly Performance Reporting"
                         ].map((item, i) => (
-                            <div key={i} className="flex items-center text-slate-300 bg-slate-900/50 p-4 rounded-lg border border-slate-800">
-                                <CheckCircle2 className="w-5 h-5 text-amber-500 mr-3 flex-shrink-0" />
+                            <div key={i} className="flex items-center text-slate-700 bg-white p-5 rounded-2xl border border-slate-100 text-sm md:text-base font-semibold shadow-sm hover:shadow-md transition-shadow">
+                                <CheckCircle2 className="w-5 h-5 text-primary-500 mr-4 flex-shrink-0" />
                                 {item}
                             </div>
                         ))}
@@ -84,65 +84,60 @@ const SocialPage: React.FC<Props> = ({ onNavigate }) => {
                 </section>
 
                 <section>
-                    <h2 className="text-3xl font-bold text-white mb-6">Why It Matters</h2>
-                    <p className="text-slate-400 mb-6 leading-relaxed">
-                        Social media penetration rates are skyrocketing. Your customers are scrolling right now. If your feed looks outdated or inactive, they assume your business is too. We turn your social channels into a dynamic portfolio that sells 24/7.
+                    <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-8 md:mb-10 tracking-tight">The Digital Showcase</h2>
+                    <p className="text-slate-600 mb-12 leading-relaxed text-lg font-medium">
+                        Your customers are scrolling right now. If your feed looks outdated, they assume your business is too. We turn your social channels into a dynamic portfolio that communicates prestige and authority.
                     </p>
-                    <div className="bg-slate-900 p-6 rounded-xl border border-slate-800 flex gap-4 items-center">
-                        <Instagram className="w-12 h-12 text-pink-500" />
+                    <div className="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-slate-100 flex gap-8 items-center shadow-sm">
+                        <div className="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center shrink-0">
+                            <Instagram className="w-8 h-8 text-pink-500" />
+                        </div>
                         <div>
-                            <h3 className="text-white font-bold">The "Instagrammable" Standard</h3>
-                            <p className="text-slate-400 text-sm">We ensure your brand fits the luxury, high-end aesthetic that defines the modern lifestyle, making your business desirable.</p>
+                            <h3 className="text-slate-900 font-black text-xl">The Aesthetic Standard</h3>
+                            <p className="text-slate-500 text-sm font-medium mt-1">We ensure your brand fits the high-end, visual aesthetic that defines the global digital landscape.</p>
                         </div>
                     </div>
                 </section>
 
                 <section>
-                     <h2 className="text-3xl font-bold text-white mb-6">Industries We Elevate</h2>
-                     <div className="space-y-4">
-                        <div className="flex items-center bg-slate-900/50 p-4 rounded-lg">
-                            <span className="w-3 h-3 bg-amber-500 rounded-full mr-4"></span>
-                            <span className="text-white font-bold mr-2">Luxury F&B:</span>
-                            <span className="text-slate-400 text-sm">Showcasing ambiance and culinary art.</span>
-                        </div>
-                        <div className="flex items-center bg-slate-900/50 p-4 rounded-lg">
-                             <span className="w-3 h-3 bg-amber-500 rounded-full mr-4"></span>
-                            <span className="text-white font-bold mr-2">Fashion & Beauty:</span>
-                            <span className="text-slate-400 text-sm">Visual storytelling and trend-based content.</span>
-                        </div>
-                        <div className="flex items-center bg-slate-900/50 p-4 rounded-lg">
-                             <span className="w-3 h-3 bg-amber-500 rounded-full mr-4"></span>
-                            <span className="text-white font-bold mr-2">Hospitality:</span>
-                            <span className="text-slate-400 text-sm">Hotels, beach clubs, and tourism experiences.</span>
-                        </div>
-                     </div>
+                     <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-8 md:mb-10 tracking-tight">Industries We Elevate</h2>
+                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        {[
+                          { title: "Luxury F&B", sub: "Capturing culinary art and ambiance for elite dining." },
+                          { title: "Fashion", sub: "High-fashion storytelling and influencer-led trends." },
+                          { title: "Hospitality", sub: "Promoting exclusive global travel destinations." }
+                        ].map((item, i) => (
+                          <div key={i} className="bg-white p-8 rounded-[2rem] border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+                              <div className="w-8 h-1 bg-primary-500 rounded-full mb-6"></div>
+                              <h3 className="text-slate-900 font-bold mb-3 text-lg md:text-xl">{item.title}</h3>
+                              <p className="text-sm text-slate-500 font-medium leading-relaxed">{item.sub}</p>
+                          </div>
+                        ))}
+                    </div>
                 </section>
             </div>
 
-            {/* Sidebar FAQ */}
-            <div className="space-y-8">
-                <div className="bg-slate-900 p-8 rounded-2xl border border-slate-800">
-                    <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2"><HelpCircle className="w-5 h-5 text-amber-500"/> FAQ</h3>
-                    <div className="space-y-6">
+            {/* Sidebar FAQ & CTA */}
+            <div className="space-y-10">
+                <div className="bg-slate-50 p-8 md:p-10 rounded-[2.5rem] border border-slate-100 shadow-sm">
+                    <h3 className="text-xl md:text-2xl font-black text-slate-900 mb-8 flex items-center gap-3 tracking-tight"><HelpCircle className="w-6 h-6 text-primary-600"/> FAQ</h3>
+                    <div className="space-y-8">
                         <div>
-                            <h4 className="text-white font-semibold text-sm mb-2">How often do you post?</h4>
-                            <p className="text-slate-400 text-xs leading-relaxed">Typically 3-5 times a week on the feed, plus daily stories to keep the algorithm happy and your audience engaged.</p>
+                            <h4 className="text-slate-900 font-bold text-sm md:text-base mb-2">How often do you post?</h4>
+                            <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">We typically schedule 3-5 high-impact feed posts weekly, complemented by daily story engagement.</p>
                         </div>
                         <div>
-                            <h4 className="text-white font-semibold text-sm mb-2">Do you create the content?</h4>
-                            <p className="text-slate-400 text-xs leading-relaxed">Yes! We have an in-house team of photographers, videographers, and editors. You don't need to lift a finger.</p>
-                        </div>
-                        <div>
-                            <h4 className="text-white font-semibold text-sm mb-2">What about regional content?</h4>
-                            <p className="text-slate-400 text-xs leading-relaxed">We provide full multilingual management with native copywriters who understand local dialects and tone.</p>
+                            <h4 className="text-slate-900 font-bold text-sm md:text-base mb-2">Do you create the content?</h4>
+                            <p className="text-slate-500 text-xs md:text-sm leading-relaxed font-medium">Absolutely. We provide in-house photography, videography, and creative direction.</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-amber-500 to-amber-600 p-8 rounded-2xl text-center shadow-lg">
-                    <h3 className="text-slate-900 font-bold text-xl mb-4">Let's Get Creative</h3>
-                    <p className="text-slate-900/80 text-sm mb-6">Book a consultation to see our portfolio.</p>
-                    <a href="https://wa.me/971505975089" target="_blank" rel="noopener noreferrer" className="bg-slate-950 text-white w-full py-3 rounded-lg font-bold hover:bg-slate-900 transition-colors block">
+                <div className="bg-primary-50 p-10 rounded-[2.5rem] text-center border border-primary-100 shadow-sm relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-white/50 blur-[60px] rounded-full"></div>
+                    <h3 className="text-slate-900 font-black text-xl md:text-3xl mb-4 tracking-tight relative z-10">Let's Get Creative</h3>
+                    <p className="text-slate-600 text-sm mb-10 font-medium leading-relaxed relative z-10">Book a strategy call to see how we can transform your social ROI.</p>
+                    <a href="https://wa.me/971505975089" target="_blank" rel="noopener noreferrer" className="bg-primary-600 hover:bg-primary-700 text-white w-full py-5 rounded-full font-black transition-all block text-base shadow-xl shadow-primary-500/20 active:scale-95 relative z-10">
                         WhatsApp Us
                     </a>
                 </div>
