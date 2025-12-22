@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -81,6 +82,19 @@
         background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* GIF-style Animation for the word "Hub" */
+      @keyframes hubGlimmer {
+        0% { color: #0ea5e9; transform: scale(1); text-shadow: 0 0 0px transparent; }
+        25% { color: #38bdf8; transform: scale(1.02); }
+        50% { color: #f59e0b; transform: scale(1.05); text-shadow: 0 0 15px rgba(245, 158, 11, 0.3); }
+        75% { color: #fbbf24; transform: scale(1.02); }
+        100% { color: #0ea5e9; transform: scale(1); text-shadow: 0 0 0px transparent; }
+      }
+      .hub-animated {
+        display: inline-block;
+        animation: hubGlimmer 4s infinite ease-in-out;
       }
     </style>
   </head>

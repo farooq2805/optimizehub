@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Page } from '../types';
 import { Instagram, Linkedin, Twitter, Mail, MapPin } from 'lucide-react';
@@ -57,13 +58,13 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li className="flex items-center text-slate-500 text-sm">
                 <Mail className="w-5 h-5 mr-3 text-primary-500 shrink-0" />
-                <span>hello@optimizehub.co</span>
+                <a href="mailto:hello@optimizehub.co" className="hover:text-brand-gold transition-colors font-semibold">hello@optimizehub.co</a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-slate-200 pt-10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-400 font-medium">
+        <div className="border-t border-slate-200 pt-10 flex flex-col md:flex-row justify-between architecture items-center text-xs text-slate-400 font-medium">
           <p>© {new Date().getFullYear()} OptimizeHub. All rights reserved.</p>
           <div className="flex space-x-8 mt-6 md:mt-0">
             <span className="cursor-pointer hover:text-primary-600">Privacy Policy</span>

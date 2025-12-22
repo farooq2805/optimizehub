@@ -1,6 +1,7 @@
+
 import React, { useState } from 'react';
 import { Page } from '../types';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Compass } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: Page;
@@ -26,26 +27,89 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
     <nav className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-lg border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          {/* Logo */}
-          <div 
-            className="flex-shrink-0 flex items-center cursor-pointer"
-            onClick={() => handleNav(Page.HOME)}
-          >
-            <span className="font-bold text-2xl tracking-tight text-slate-900">
-              Optimize<span className="text-brand-gold">Hub</span>
-            </span>
+          
+          {/* Logo with Enhanced Hover Interaction */}
+          <div className="relative group py-4">
+            <div 
+              className="flex-shrink-0 flex items-center cursor-pointer"
+              onClick={() => handleNav(Page.HOME)}
+            >
+              <span className="font-black text-2xl tracking-tight text-slate-900 flex items-center">
+                Optimize<span className="hub-animated ml-0.5">Hub</span>
+              </span>
+            </div>
+
+            {/* Invisible Bridge to maintain hover state between logo and card */}
+            <div className="absolute top-full left-0 w-full h-4 bg-transparent invisible group-hover:visible"></div>
+
+            {/* Premium Hover Contact Card */}
+            <div className="absolute top-[calc(100%+8px)] left-0 w-[360px] bg-white shadow-[0_30px_70px_-15px_rgba(0,0,0,0.2)] rounded-[2rem] p-8 opacity-0 translate-y-4 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-500 ease-out z-[100] border border-slate-100/50">
+              
+              <div className="space-y-6">
+                {/* Business Enquiries - Highlighted for 'Stickiness' */}
+                <a 
+                  href="tel:+971505975089"
+                  className="flex gap-5 group/item p-3 -m-3 rounded-2xl hover:bg-slate-50 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center shrink-0 group-hover/item:scale-110 group-hover/item:bg-orange-100 transition-all">
+                    <Phone className="w-5 h-5 text-brand-gold" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-slate-400 font-black text-[10px] uppercase tracking-[0.2em] mb-1">Direct Growth Line</h4>
+                    <p className="text-slate-900 text-lg font-black leading-none mb-1">+971 50 597 5089</p>
+                    <p className="text-slate-400 text-[10px] font-bold">Mon-Fri : 9AM-6PM (UAE TIME)</p>
+                  </div>
+                </a>
+
+                <div className="h-px w-full bg-slate-100/80"></div>
+
+                {/* Email Inquiry */}
+                <a 
+                  href="mailto:hello@optimizehub.co"
+                  className="flex gap-5 group/item p-3 -m-3 rounded-2xl hover:bg-slate-50 transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-2xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0 group-hover/item:scale-110 group-hover/item:bg-blue-100 transition-all">
+                    <Mail className="w-5 h-5 text-primary-500" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-slate-400 font-black text-[10px] uppercase tracking-[0.2em] mb-1">Official Support</h4>
+                    <p className="text-slate-900 text-lg font-black leading-none truncate">hello@optimizehub.co</p>
+                  </div>
+                </a>
+
+                <div className="h-px w-full bg-slate-100/80"></div>
+
+                {/* Headquarters */}
+                <div className="flex gap-5 p-3 -m-3 rounded-2xl">
+                  <div className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-center shrink-0">
+                    <Compass className="w-5 h-5 text-slate-500" />
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="text-slate-400 font-black text-[10px] uppercase tracking-[0.2em] mb-1">Our HQ</h4>
+                    <p className="text-slate-500 text-xs leading-relaxed font-bold">
+                      Level 42, Marina Plaza, Dubai Marina,<br/>Dubai, United Arab Emirates
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Bottom Decorative Label */}
+              <div className="mt-8 pt-4 border-t border-slate-50 text-center">
+                <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">Premium Dubai Marketing Agency</span>
+              </div>
+            </div>
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-10">
             {navItems.map((item) => (
               <button
                 key={item.value}
                 onClick={() => handleNav(item.value)}
-                className={`text-sm font-medium transition-colors duration-200 ${
+                className={`text-sm font-black uppercase tracking-widest transition-all duration-200 ${
                   currentPage === item.value
                     ? 'text-primary-600'
-                    : 'text-slate-500 hover:text-slate-900'
+                    : 'text-slate-400 hover:text-slate-900'
                 }`}
               >
                 {item.label}
@@ -57,7 +121,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
           <div className="hidden md:flex">
              <button 
                 onClick={() => handleNav(Page.CONTACT)}
-                className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all hover:shadow-lg hover:shadow-primary-500/20 active:scale-95"
+                className="bg-slate-900 hover:bg-black text-white px-8 py-3 rounded-full font-black text-xs uppercase tracking-widest transition-all hover:shadow-[0_20px_40px_rgba(0,0,0,0.15)] active:scale-95"
              >
                Get Started
              </button>

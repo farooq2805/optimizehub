@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, MessageCircle, Calendar, ShieldCheck } from 'lucide-react';
 
@@ -58,7 +59,9 @@ const Contact: React.FC = () => {
               <div className="pt-10 border-t border-slate-100">
                 <div className="flex flex-col sm:flex-row gap-6 md:gap-10 text-slate-400 font-bold uppercase tracking-widest text-xs">
                   <div className="flex items-center gap-2 text-slate-700"><Phone className="w-4 h-4 text-primary-500"/> +971 50 597 5089</div>
-                  <div className="flex items-center gap-2 text-slate-700"><Mail className="w-4 h-4 text-primary-500"/> hello@optimizehub.co</div>
+                  <a href="mailto:hello@optimizehub.co" className="flex items-center gap-2 text-slate-700 hover:text-brand-gold transition-colors font-semibold">
+                    <Mail className="w-4 h-4 text-primary-500"/> hello@optimizehub.co
+                  </a>
                 </div>
               </div>
             </div>
