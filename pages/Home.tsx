@@ -32,12 +32,12 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section: The Bitter Truth - Refined Pastel */}
+      {/* Hero Section: The Bitter Truth - Refined Gold */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-12 bg-white">
-        {/* Soft Mesh Gradients */}
+        {/* Soft Gold Mesh Gradients */}
         <div className="absolute top-0 left-0 w-full h-full opacity-40 pointer-events-none">
-          <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-100 rounded-full blur-[120px]"></div>
-          <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-indigo-50 rounded-full blur-[120px]"></div>
+          <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-amber-50 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] bg-orange-50 rounded-full blur-[120px]"></div>
         </div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-4 text-center">
@@ -112,21 +112,21 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 title: "Get Found When They Search", 
                 benefit: "SEO isn't just ranking; it's being the first answer when a customer has a problem. We put you in front of people ready to buy today.",
                 cta: "Own Google",
-                color: "bg-blue-50 text-blue-600"
+                color: "bg-amber-50 text-amber-600"
               },
               { 
                 icon: <Zap className="w-8 h-8" />, 
                 title: "Scale Your Sales with Ads", 
                 benefit: "Don't 'boost posts'. We build high-precision systems that turn $1 of ad spend into $4+ of revenue. Predictable. Scalable. Profitable.",
                 cta: "Start Scaling",
-                color: "bg-indigo-50 text-indigo-600"
+                color: "bg-orange-50 text-orange-600"
               },
               { 
                 icon: <ShieldCheck className="w-8 h-8" />, 
                 title: "Build A Brand They Trust", 
                 benefit: "If your social media looks cheap, your product feels cheap. We create premium content that makes customers choose you over the competition.",
                 cta: "Upgrade Brand",
-                color: "bg-teal-50 text-teal-600"
+                color: "bg-yellow-50 text-yellow-600"
               },
             ].map((s, idx) => (
               <div key={idx} className="bg-white p-10 rounded-[2.5rem] border border-slate-100 hover:border-primary-200 transition-all group hover:shadow-2xl hover:shadow-primary-500/5">
@@ -144,7 +144,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         </div>
       </section>
 
-      {/* Human Proof: Testimonials - Soft & Warm */}
+      {/* Human Proof: Testimonials - Soft & Gold */}
       <section className="py-20 md:py-32 bg-slate-50 border-t border-slate-100">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">

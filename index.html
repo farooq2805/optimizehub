@@ -1,7 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0LWSBP1B2M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-0LWSBP1B2M');
+    </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OptimizeHub | Digital Growth Agency</title>
@@ -9,7 +18,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS Config -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,11 +31,11 @@
             },
             colors: {
               primary: {
-                50: '#f0f9ff',
-                100: '#e0f2fe',
-                500: '#0ea5e9',
-                600: '#0284c7',
-                700: '#0369a1',
+                50: '#fffbeb', /* amber 50 */
+                100: '#fef3c7', /* amber 100 */
+                500: '#f59e0b', /* amber 500 */
+                600: '#d97706', /* amber 600 */
+                700: '#b45309', /* amber 700 */
               },
               brand: {
                 indigo: '#4f46e5',
@@ -62,14 +71,14 @@
         color: #0f172a; /* Slate 900 */
         overflow-x: hidden;
       }
-      /* Custom Pastel Gradient Text */
+      /* Custom Pastel Gradient Text - Now Golden */
       .text-gradient-brand {
-        background: linear-gradient(to right, #4f46e5, #0ea5e9);
+        background: linear-gradient(to right, #f59e0b, #d97706);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       .bg-gradient-brand {
-        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
       }
       .fade-in {
         animation: fadeIn 0.5s ease-in;
@@ -86,11 +95,9 @@
 
       /* GIF-style Animation for the word "Hub" */
       @keyframes hubGlimmer {
-        0% { color: #0ea5e9; transform: scale(1); text-shadow: 0 0 0px transparent; }
-        25% { color: #38bdf8; transform: scale(1.02); }
-        50% { color: #f59e0b; transform: scale(1.05); text-shadow: 0 0 15px rgba(245, 158, 11, 0.3); }
-        75% { color: #fbbf24; transform: scale(1.02); }
-        100% { color: #0ea5e9; transform: scale(1); text-shadow: 0 0 0px transparent; }
+        0% { color: #f59e0b; transform: scale(1); text-shadow: 0 0 0px transparent; }
+        50% { color: #fbbf24; transform: scale(1.05); text-shadow: 0 0 15px rgba(245, 158, 11, 0.4); }
+        100% { color: #f59e0b; transform: scale(1); text-shadow: 0 0 0px transparent; }
       }
       .hub-animated {
         display: inline-block;
